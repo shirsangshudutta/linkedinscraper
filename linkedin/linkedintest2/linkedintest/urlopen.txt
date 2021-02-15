@@ -1,0 +1,26 @@
+
+html = '''<a href="some_url">next</a>
+<span class="class"><a href="another_url">later</a></span>'''
+
+soup = BeautifulSoup(html)
+
+for a in soup.find_all('a', href=True):
+    print "Found the URL:", a['href']
+	
+	
+	html = litag
+
+soup = BeautifulSoup(html)
+
+for a in soup.find_all('a', href=True):
+    print ("Found the URL:", a['href'])
+	
+	
+	from bs4 import BeautifulSoup
+import urllib.request
+
+resp = urllib.request.urlopen("http://www.gpsbasecamp.com/national-parks")
+soup = BeautifulSoup(resp, from_encoding=resp.info().get_param('charset'))
+
+for link in soup.find_all('a', href=True):
+    print(link['href'])

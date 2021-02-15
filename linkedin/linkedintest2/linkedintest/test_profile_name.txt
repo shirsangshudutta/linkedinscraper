@@ -1,0 +1,1243 @@
+from bs4 import BeautifulSoup
+html="""<div class="pv-content profile-view-grid neptune-grid two-column ghost-animate-in ">
+      <section id="ember52" class="pv-ad-banner--light ad-banner-container is-header-zone ember-view"><iframe class="ad-banner" width="100%" height="17" src="about:blank" scrolling="no" title="advertisement"></iframe>
+
+<!---->
+<!---->
+<!----></section>
+
+      <main class="core-rail">
+        <div>
+  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="hidden" data-elementtiming="true" alt="">
+<section id="ember54" class="pv-top-card artdeco-card ember-view"><!---->
+      <div tabindex="0" id="ember55" class="profile-background-image ember-view">  <div class="profile-background-image__image-container">
+      <img class="profile-background-image__image relative full-width full-height" id="profile-background-image-target-image" alt="Background Image" src="https://media-exp1.licdn.com/dms/image/C5616AQGBoFqx4lrj2w/profile-displaybackgroundimage-shrink_350_1400/0/1516246455781?e=1616630400&amp;v=beta&amp;t=sjav2TaJ6GoJ7S-sc9OvIU54X0yy5LlVoDHMc2AuqF0" style="">
+  </div>
+</div>
+
+    <div class="ph5 pb5">
+      <div class="display-flex">
+        <div class="pv-top-card--photo text-align-left">
+          <div class="pv-top-card__photo-wrapper ml0">
+              <div id="ember57" class="presence-entity pv-top-card__image presence-entity--size-9 ember-view"><img title="Rajarshi Sengupta" src="https://media-exp1.licdn.com/dms/image/C5603AQF9lIDkQazfrQ/profile-displayphoto-shrink_400_400/0/1516246455260?e=1616630400&amp;v=beta&amp;t=9lRlwbPifVEUY11CulyJve9sphgFsrYg1UBQWr473U4" loading="lazy" alt="Rajarshi Sengupta" id="ember58" class="pv-top-card__photo presence-entity__image EntityPhoto-circle-9 lazy-image ember-view">
+
+<div id="ember59" class=" presence-entity__indicator presence-entity__indicator--size-9 presence-indicator hidden presence-indicator--size-9 ember-view">
+<span class="visually-hidden">
+    Status is offline
+  </span></div></div>
+
+          </div>
+          <!---->
+        </div>
+
+        <div class="flex-1 flex-column display-flex mt3 mb1">
+          <div class="display-flex justify-flex-end align-items-center">
+<div id="ember61" class="mt1 inline-flex align-items-center ember-view"><div id="ember105" class="ember-view"><div id="ember106" class="ember-view">    <button aria-label="Connect with Rajarshi Sengupta" id="ember107" class="pv-s-profile-actions pv-s-profile-actions--connect ml2 artdeco-button artdeco-button--2 artdeco-button--primary ember-view" type="button"><!---->
+<span class="artdeco-button__text">
+    Connect
+</span></button>
+</div><!----></div><!----><div id="ember108" class="ember-view">      <div id="ember109" class="ember-view" data-control-name="compose_message_button"><div id="ember110" class="ember-view"><!----></div>  <button data-control-name="message_btn_interstitial_upsell" id="ember111" class="pv-s-profile-actions pv-s-profile-actions--message ml2 artdeco-button artdeco-button--2 artdeco-button--muted artdeco-button--secondary artdeco-button artdeco-button--2 artdeco-button--secondary ember-view">  <li-icon aria-hidden="true" type="lock-icon" class="artdeco-button__icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M12 6V5a4 4 0 00-8 0v1a2 2 0 00-2 2v5a2 2 0 002 2h8a2 2 0 002-2V8a2 2 0 00-2-2zm-3 6H7V9h2zM6 6V5a2 2 0 014 0v1z"></path>
+</svg></li-icon>
+
+<span class="artdeco-button__text">
+    Message
+</span></button>
+</div>
+
+</div><div id="ember62" class="pv-s-profile-actions__overflow ember-view"><div id="ember112" class="artdeco-dropdown artdeco-dropdown--placement-bottom artdeco-dropdown--justification-left ember-view"><button aria-expanded="false" id="ember113" class="ml2 pv-s-profile-actions__overflow-toggle artdeco-button artdeco-button--muted artdeco-button--2 artdeco-button--secondary artdeco-dropdown__trigger artdeco-dropdown__trigger--placement-bottom ember-view" type="button" tabindex="0">        <span>More…</span>
+
+<!----></button>
+<div tabindex="-1" aria-hidden="true" id="ember114" class="pv-s-profile-actions__overflow-dropdown display-flex artdeco-dropdown__content artdeco-dropdown--is-dropdown-element artdeco-dropdown__content--justification-left artdeco-dropdown__content--placement-bottom ember-view"><div class="artdeco-dropdown__content-inner">
+        <ul class="full-width">
+          <li id="ember116" class="ember-view"><div id="ember117" class="ember-view"><div id="ember118" class="pv-s-profile-actions pv-s-profile-actions--share-profile pv-s-profile-actions__overflow-button full-width text-align-left artdeco-dropdown__item artdeco-dropdown__item--is-dropdown ember-view" tabindex="0"><!---->    <li-icon aria-hidden="true" type="messages-icon" class="pv-s-profile-actions__overflow-icon" size="large"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+  <path d="M21 3L0 10l7.66 4.26L16 8l-6.26 8.34L14 24l7-21z"></path>
+</svg></li-icon>
+    <span class="display-flex t-normal pv-s-profile-actions__label" aria-hidden="true">Share profile in a message</span>
+    <span class="a11y-text">Share Rajarshi Sengupta’s profile via message</span>
+</div></div>
+
+<div class="pv-s-profile-actions__share-profile-button hidden">
+      <button class="message-anywhere-button " aria-label="Send group message to " type="button">
+          Message
+      </button>
+  </div>
+
+</li>
+          <li id="ember120" class="ember-view"><div id="ember121" class="ember-view"><div id="ember122" class="pv-s-profile-actions pv-s-profile-actions--save-to-pdf pv-s-profile-actions__overflow-button full-width text-align-left artdeco-dropdown__item artdeco-dropdown__item--is-dropdown ember-view" tabindex="0"><!---->    <li-icon aria-hidden="true" type="download-icon" class="pv-s-profile-actions__overflow-icon" size="large"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+  <path d="M21 14v5a3 3 0 01-3 3H6a3 3 0 01-3-3v-5h2v5a1 1 0 001 1h12a1 1 0 001-1v-5zm-4-.57V11l-4 2.85V3h-2v10.85L7 11v2.43L12 17z"></path>
+</svg></li-icon>
+    <span class="display-flex t-normal pv-s-profile-actions__label" aria-hidden="true">Save to PDF</span>
+    <span class="a11y-text">Save Rajarshi Sengupta’s profile to PDF</span>
+</div></div>
+</li>
+          <li id="ember124" class="ember-view"><div id="ember125" class="ember-view"><div id="ember126" class="pv-s-profile-actions pv-s-profile-actions--follow pv-s-profile-actions__overflow-button full-width text-align-left artdeco-dropdown__item artdeco-dropdown__item--is-dropdown ember-view" tabindex="0"><!---->    <li-icon aria-hidden="true" type="plus-icon" class="pv-s-profile-actions__overflow-icon" size="large"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+  <path d="M21 13h-8v8h-2v-8H3v-2h8V3h2v8h8z"></path>
+</svg></li-icon>
+    <span class="display-flex t-normal pv-s-profile-actions__label" aria-hidden="true">Follow</span>
+    <span class="a11y-text">Follow Rajarshi Sengupta</span>
+</div></div></li>
+          <li id="ember128" class="ember-view"><div id="ember129" class="ember-view"><div id="ember130" class="pv-s-profile-actions pv-s-profile-actions--report pv-s-profile-actions__overflow-button full-width text-align-left artdeco-dropdown__item artdeco-dropdown__item--is-dropdown ember-view" tabindex="0"><!---->    <li-icon aria-hidden="true" type="flag-icon" class="pv-s-profile-actions__overflow-icon" size="large"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+  <path d="M17.9 4.38a5.82 5.82 0 01-1.9.31 6.1 6.1 0 01-1.9-.31l-3.2-1.07A6.41 6.41 0 009 3a5.57 5.57 0 00-1.9.31L6 3.67V2H4v20h2v-8l1.1-.37a6.41 6.41 0 011.9-.32 5.82 5.82 0 011.9.31l3.2 1.07a6 6 0 003.8 0L20 14V3.68z"></path>
+</svg></li-icon>
+    <span class="display-flex t-normal pv-s-profile-actions__label" aria-hidden="true">Report / Block</span>
+    <span class="a11y-text">Report or block Rajarshi Sengupta’s profile</span>
+</div></div>
+
+<!----></li>
+      </ul>
+
+</div>
+</div></div>
+</div></div>
+<!---->          </div>
+        </div>
+      </div>
+
+      <div class="display-flex mt2">
+        <div class="flex-1 mr5">
+          <ul class="pv-top-card--list inline-flex align-items-center">
+            <li class="inline t-24 t-black t-normal break-words">
+              Rajarshi Sengupta
+            </li>
+                <li class="pv-top-card__distance-badge inline-block v-align-text-bottom t-16 t-black--light t-normal"><span class="distance-badge separator">
+        <span class="visually-hidden">2nd degree connection</span><span class="dist-value" aria-hidden="true">2nd</span>
+      </span></li>
+<!---->              <li class="inline-flex ml2">
+                <span id="ember63" style="display: none;" class="pv-member-badge--for-top-card inline-flex pv-member-badge ember-view"><!---->
+<!---->
+<span class="visually-hidden">
+  Rajarshi has a  account
+</span>
+
+<!----></span>
+              </li>
+
+<!---->          </ul>
+
+            <h2 class="mt1 t-18 t-black t-normal break-words">
+              Chief Innovation Officer, Deloitte India
+            </h2>
+
+          <ul class="pv-top-card--list pv-top-card--list-bullet mt1">
+              <li class="t-16 t-black t-normal inline-block">
+                Baduria, West Bengal, India
+              </li>
+
+<!---->
+              <li class="inline-block">
+                  <span class="t-16 t-black t-normal">
+                    500+ connections
+                  </span>
+              </li>
+
+              <li class="inline-block">
+<a data-control-name="contact_see_more" href="/in/rajarshi-sengupta-87b0bb2/detail/contact-info/" id="ember64" class="ember-view">                  <span class="t-16 link-without-visited-state">
+                    Contact info
+                  </span>
+</a>              </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="pv-top-card--experience-list">
+              <li>
+                <a class="pv-top-card--experience-list-item" href="#" data-control-name="position_see_more" data-ember-action="" data-ember-action-65="65">
+                  <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQFPdCHWYcLLxQ/company-logo_100_100/0/1594150827417?e=1619049600&amp;v=beta&amp;t=QwOg5yloedA4tGPcHgzuv2OLMZsfCvRlXmuIxDLYYN4" id="ember66" class="EntityPhoto-square-1 flex-shrink-zero ember-view">
+
+                  <span id="ember67" class="text-align-left ml2 t-14 t-black t-bold full-width lt-line-clamp lt-line-clamp--multi-line ember-view" style="-webkit-line-clamp: 2">  Deloitte Touche Tohmatsu India LLP
+
+<!----></span>
+                </a>
+              </li>
+
+              <li>
+                <a class="pv-top-card--experience-list-item" href="#" data-control-name="education_see_more" data-ember-action="" data-ember-action-68="68">
+                  <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQGFFDl_Z9pIAA/company-logo_100_100/0/1595014871850?e=1619049600&amp;v=beta&amp;t=itDi7PS5vhqVJv6ZNnoyo2UgUES5sC6QtL58EnHvN20" id="ember69" class="EntityPhoto-square-1 flex-shrink-zero ember-view">
+
+                  <span id="ember70" class="text-align-left ml2 t-14 t-black t-bold full-width lt-line-clamp lt-line-clamp--multi-line ember-view" style="-webkit-line-clamp: 2">  University of Illinois at Urbana-Champaign
+
+<!----></span>
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+<!---->
+<!---->    </div>
+</section>
+    <div id="ember71" class="ember-view"><div id="ember72" class="ember-view"><!----></div></div>
+</div>
+
+
+<!---->
+<!---->
+<!---->
+        <div class="profile-detail">
+<div style="" id="ember74" class="pv-deferred-area ember-view">  <div class="pv-deferred-area__content">
+        <!---->
+<!---->
+<!---->
+
+  </div>
+</div>
+<div style="" id="ember77" class="pv-deferred-area ember-view">  <div class="pv-deferred-area__content">
+                        <section id="ember207" class="pv-highlights-section pv-profile-section artdeco-container-card artdeco-card ember-view"><h2 class="pv-highlights-section__heading pv-profile-section__card-heading">
+  Highlights
+</h2>
+
+<ul id="highlights-container" class="pv-highlights-section__list list-style-none">
+      <li data-control-name="highlights_shared_connections" id="ember209" class="pv-highlight-entity--column pv-highlight-entity ember-view">  <div class="pv-highlight-entity__card-action-container">
+    <div class="display-flex align-items-flex-start">
+      <a class="app-aware-link pv-highlight-entity__card-action-link" data-control-name="url_card_action_click_highlights_shared_connections" aria-label="You and Rajarshi both know Shirsangshu Dutta" href="https://www.linkedin.com/search/results/people/?facetNetwork=%5B%22F%22%5D&amp;facetConnectionOf=%5B%22ACoAAABe6h8BNXdwWC6QN0kRFxOHjHZnKbCBuOA%22%5D&amp;origin=MEMBER_PROFILE_CANNED_SEARCH&amp;RESULT_TYPE=PEOPLE">
+        <div class="pv-highlight-entity__logo">
+          <div id="ember210" class="pv-highlight-entity__logo-img ivm-image-view-model ember-view">  <div id="ember211" class="display-flex ivm-view-attr__img-wrapper ivm-view-attr__img-wrapper--use-img-tag ember-view"><!---->    <img width="56" src="https://media-exp1.licdn.com/dms/image/C4D03AQHGMC6PXLtwow/profile-displayphoto-shrink_100_100/0/1607614062618?e=1616630400&amp;v=beta&amp;t=H1LVPK8heUbnDiBI55-S7lKpsEy1xEJJo51enl7oJQQ" loading="lazy" height="56" alt="Profile images for several LinkedIn members" id="ember212" class="ivm-view-attr__img--centered EntityPhoto-circle-4  lazy-image ember-view">
+</div>
+</div>
+        </div>
+      </a>
+      <div class="pv-highlight-entity__details">
+        <a class="app-aware-link pv-highlight-entity__card-action-link" data-control-name="url_card_action_click_highlights_shared_connections" href="https://www.linkedin.com/search/results/people/?facetNetwork=%5B%22F%22%5D&amp;facetConnectionOf=%5B%22ACoAAABe6h8BNXdwWC6QN0kRFxOHjHZnKbCBuOA%22%5D&amp;origin=MEMBER_PROFILE_CANNED_SEARCH&amp;RESULT_TYPE=PEOPLE">
+          <h3 class="pv-highlight-entity__primary-text t-16 t-black t-bold">
+            1 mutual connection
+          </h3>
+            <p class="pv-highlight-entity__secondary-text t-14 t-black--light t-normal">
+              You and Rajarshi both know Shirsangshu Dutta
+            </p>
+        </a>
+<!---->      </div>
+    </div>
+  </div>
+</li>
+      <li data-control-name="highlights_contact_interests" id="ember214" class="pv-highlight-entity--column pv-highlight-entity ember-view">  <div class="pv-highlight-entity__card-action-container">
+    <div class="display-flex align-items-flex-start">
+      <a class="app-aware-link pv-highlight-entity__card-action-link" data-control-name="url_card_action_click_highlights_contact_interests" aria-label="Probono consulting and volunteering." href="https://www.linkedin.com/premium/products?upsellOrderOrigin=premium_inmail_profile_upsell">
+        <div class="pv-highlight-entity__logo">
+          <div id="ember215" class="pv-highlight-entity__logo-img ivm-image-view-model ember-view">  <div id="ember216" class="display-flex ivm-view-attr__img-wrapper ivm-view-attr__img-wrapper--use-img-tag ember-view">  <div class="ivm-view-attr__illustration ivm-view-attr__illustration--48 ivm-view-attr__illustration--message-bubbles-56 ">
+<!---->  </div>
+</div>
+</div>
+        </div>
+      </a>
+      <div class="pv-highlight-entity__details">
+        <a class="app-aware-link pv-highlight-entity__card-action-link" data-control-name="url_card_action_click_highlights_contact_interests" href="https://www.linkedin.com/premium/products?upsellOrderOrigin=premium_inmail_profile_upsell">
+          <h3 class="pv-highlight-entity__primary-text t-16 t-black t-bold">
+            Reach out to Rajarshi for...
+          </h3>
+            <p class="pv-highlight-entity__secondary-text t-14 t-black--light t-normal">
+              Probono consulting and volunteering.
+            </p>
+        </a>
+            <div class="mt2">
+              <a class="app-aware-link pv-highlight-entity__cta pv-highlight-entity__cta--link artdeco-button artdeco-button--secondary artdeco-button--muted" data-control-name="highlight_entity_url_cta_action_click" href="https://www.linkedin.com/premium/products?upsellOrderOrigin=premium_inmail_profile_upsell">
+                <span class="pv-highlight-entity__cta-text">
+                  Message Rajarshi
+                </span>
+              </a>
+            </div>
+      </div>
+    </div>
+  </div>
+</li>
+</ul>
+
+<!----></section>
+
+
+  </div>
+</div>
+<div id="ember79" class="pv-oc ember-view">  <section id="ember132" class="artdeco-container-card pv-profile-section pv-about-section artdeco-card ember-view"><header class="pv-profile-section__card-header">
+  <h2 class="pv-profile-section__card-heading">
+    About
+  </h2>
+
+<!----></header>
+
+                    <p id="ember133" class="pv-about__summary-text mt4 t-14 ember-view">    <span class="lt-line-clamp__line">Partner in Deloitte Touche Tohmatsu India LLP serving as the Chief Innovation Officer for the firm. Member of the</span>
+      <span class="lt-line-clamp__line">Consulting Leadership team for Deloitte India. Head of  Alliances for Consulting. Serves on the Global Innovation</span>
+      <span class="lt-line-clamp__line lt-line-clamp__line--last">
+      Executive for Deloitte. In Innovation, focuses on Exponentials such as Artificial Intelligence, Cognitive Analytic<span class="lt-line-clamp__ellipsis"><div class="lt-line-clamp__dummy-element">...</div>
+            <a data-test-line-clamp-show-more-button="true" href="#" role="button" id="line-clamp-show-more-button" aria-expanded="false" class="lt-line-clamp__more">see more</a>
+        </span></span>
+
+<!----><span class="lt-line-clamp__ellipsis lt-line-clamp__ellipsis--dummy">... <a class="lt-line-clamp__more" href="#" role="button">see more</a></span></p>
+
+</section>
+</div>
+<!---->
+<div style="" id="ember81" class="pv-deferred-area ember-view">  <div class="pv-deferred-area__content">
+                    <section id="ember217" class="pv-profile-section pv-recent-activity-section-v2 artdeco-container-card artdeco-card ember-view"><header class="pv-profile-section__card-header">
+  <h2 class="pv-profile-section__card-heading pv-recent-activity-section-v2__headline">
+    Activity
+  </h2>
+  <div class="align-self-center ember-view">
+<!---->  </div>
+</header>
+
+    <span class="align-self-center t-14 t-black--light">
+      5,071 followers
+    </span>
+
+<div class="pv-recent-activity-section-v2__summary t-14 t-black--light t-normal">
+  <div class="pv-recent-activity-section-v2__columns">
+      <p class="t-14 pb2">
+          Posts Rajarshi created, shared, or commented on in the last 90 days are displayed here.
+              </p>
+  </div>
+</div>
+
+<a data-control-name="recent_activity_null_state_see_all" href="/in/rajarshi-sengupta-87b0bb2/detail/recent-activity/" id="ember218" class="pv-profile-section__card-action-bar artdeco-container-card-action-bar artdeco-button artdeco-button--tertiary artdeco-button--3 artdeco-button--fluid artdeco-button--muted ember-view">  <span class="pv-profile-section__section-info" aria-hidden="true">See all activity</span>
+  <span class="visually-hidden">See all activity</span>
+</a></section>
+
+
+  </div>
+</div>
+<div id="oc-background-section" class="pv-oc ember-view">              <span class="background-details">
+              <div id="ember137" class="ember-view"><section id="ember138" class="pv-profile-section pv-profile-section--reorder-enabled background-section artdeco-container-card artdeco-card ember-view"><div id="ember139" class="pv-profile-section-pager ember-view"><section id="experience-section" class="pv-profile-section experience-section ember-view"><header class="pv-profile-section__card-header">
+  <h2 class="pv-profile-section__card-heading">
+    Experience
+  </h2>
+
+<!----></header>
+
+  <ul class="pv-profile-section__section-info section-info pv-profile-section__section-info--has-no-more">
+<li id="ember142" class="pv-entity__position-group-pager pv-profile-section__list-item ember-view">        <section id="45558024" class="pv-profile-section__card-item-v2 pv-profile-section pv-position-entity ember-view">  <div class="display-flex justify-space-between full-width">
+    <div class="display-flex flex-column full-width">
+<a data-control-name="background_details_company" href="/company/deloitte/" id="ember144" class="full-width ember-view">          <div class="pv-entity__logo company-logo">
+  <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQFPdCHWYcLLxQ/company-logo_100_100/0/1594150827417?e=1619049600&amp;v=beta&amp;t=QwOg5yloedA4tGPcHgzuv2OLMZsfCvRlXmuIxDLYYN4" loading="lazy" alt="Deloitte Touche Tohmatsu India LLP" id="ember146" class="pv-entity__logo-img EntityPhoto-square-5 lazy-image ember-view">
+</div>
+<div class="pv-entity__summary-info pv-entity__summary-info--background-section mb2">
+  <h3 class="t-16 t-black t-bold">Partner</h3>
+  <p class="visually-hidden">Company Name</p>
+  <p class="pv-entity__secondary-title t-14 t-black t-normal">
+      Deloitte Touche Tohmatsu India LLP
+<!---->  </p>
+    <div class="display-flex">
+    <h4 class="pv-entity__date-range t-14 t-black--light t-normal">
+      <span class="visually-hidden">Dates Employed</span>
+      <span>Aug 2008 – Present</span>
+    </h4>
+      <h4 class="t-14 t-black--light t-normal">
+        <span class="visually-hidden">Employment Duration</span>
+        <span class="pv-entity__bullet-item-v2">12 yrs 6 mos</span>
+      </h4>
+  </div>
+
+<!---->
+<!---->
+</div>
+
+</a>
+        <div id="ember148" class="pv-entity__extra-details t-14 t-black--light ember-view"><p style="line-height:2rem;max-height:16rem;" id="ember149" class="pv-entity__description t-14 t-black t-normal inline-show-more-text inline-show-more-text--is-collapsed ember-view">  Rajarshi is the Chief Innovation Officer for Deloitte in India across all functional areas and services. He is also the Head of Strategy and Alliances for Consulting and is a member of the Consulting Leadership Executive team for India. His work focuses on the impact of Exponentials (Artificial Intelligence, Cognitive (Machine Learning, NLP/NLG, Analytics), Deep Learning, Crowd Sourcing, Blockchain and Robotic Process Automation amongst others) on business and technology for clients in India and abroad. Rajarshi also serves on the Global Innovation Executive team for Deloitte. In addition Rajarshi works on core Technology Transformation Projects in the areas of Technology Strategy and Architecture and Information Management and Analytics. His focus is on large complex business transformation problems that can be enabled by Technology and Innovation with a specific focus on Analytics
+
+    <span class="inline-show-more-text__link-container-collapsed">
+        <span>…</span>
+        <button class="inline-show-more-text__button  link" aria-expanded="false" type="button" data-ember-action="" data-ember-action-194="194">
+          see more
+        </button>
+    </span>
+
+<!----></p><!----></div>
+    </div>
+
+<!---->  </div>
+</section>
+</li><li id="ember151" class="pv-entity__position-group-pager pv-profile-section__list-item ember-view">        <section id="ember152" class="pv-profile-section__card-item-v2 pv-profile-section pv-position-entity ember-view">  <div class="display-flex justify-space-between full-width">
+<a data-control-name="background_details_company" href="/company/pwc/" id="ember153" class="full-width ember-view">        <div class="pv-entity__company-details">
+  <div class="pv-entity__logo company-logo">
+    <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQFprRTe6CgN7A/company-logo_100_100/0/1593613945636?e=1619049600&amp;v=beta&amp;t=9vR-mn3xfL4tTnv4F7DLot6z7-amSE5TXe0rQUlIF8g" loading="lazy" alt="PricewaterhouseCoopers" id="ember155" class="pv-entity__logo-img EntityPhoto-square-5 lazy-image ember-view">
+  </div>
+  <div class="pv-entity__company-summary-info">
+    <h3 class="t-16 t-black t-bold">
+      <span class="visually-hidden">Company Name</span>
+      <span>PricewaterhouseCoopers</span>
+    </h3>
+        <h4 class="t-14 t-black t-normal">
+          <span class="visually-hidden">Total Duration</span>
+          <span>12 yrs 11 mos</span>
+        </h4>
+  </div>
+</div>
+</a>
+<!---->  </div>
+
+    <ul class="pv-entity__position-group mt2">
+        <li class="pv-entity__position-group-role-item">
+          <div id="ember157" class="ember-view"><div class="pv-entity__role-details">
+  <span class="pv-entity__timeline-node"></span>
+  <div class="display-flex justify-space-between full-width">
+    <div class="pv-entity__role-container">
+      <div class="pv-entity__role-details-container pv-entity__role-details-container--timeline pv-entity__role-details-container--bottom-margin">
+
+        <div class="pv-entity__summary-info-v2 pv-entity__summary-info--background-section pv-entity__summary-info-margin-top mb2">
+          <h3 class="t-14 t-black t-bold">
+            <span class="visually-hidden">Title</span>
+            <span>Executive Director / Partner</span>
+          </h3>
+<!---->            <div class="display-flex">
+              <h4 class="pv-entity__date-range t-14 t-black--light t-normal">
+                <span class="visually-hidden">Dates Employed</span>
+                <span>Apr 1999 – Jul 2008</span>
+              </h4>
+                <h4 class="t-14 t-black--light t-normal">
+                  <span class="visually-hidden">Employment Duration</span>
+                  <span class="pv-entity__bullet-item-v2">9 yrs 4 mos</span>
+                </h4>
+            </div>
+
+<!----><!---->        </div>
+
+
+          <div id="ember158" class="pv-entity__extra-details t-14 t-black--light ember-view"><p style="line-height:2rem;max-height:8rem;" id="ember159" class="pv-entity__description t-14 t-black t-normal inline-show-more-text inline-show-more-text--is-collapsed ember-view">  Led two major service areas - Business Intelligence and Enterprise Architecture and Integration<br>Led Learning and Education for Advisory. Led the Healthcare Industry Vertical<br>Served as the Global Lead for Technology in the Global Performance Improvement Executive of PwC
+
+<!----></p><!----></div>
+      </div>
+    </div>
+
+<!---->  </div>
+</div>
+</div>
+        </li>
+        <li class="pv-entity__position-group-role-item">
+          <div id="ember161" class="ember-view"><div class="pv-entity__role-details">
+  <span class="pv-entity__timeline-node"></span>
+  <div class="display-flex justify-space-between full-width">
+    <div class="pv-entity__role-container">
+      <div class="pv-entity__role-details-container  ">
+
+        <div class="pv-entity__summary-info-v2 pv-entity__summary-info--background-section pv-entity__summary-info-margin-top mb2">
+          <h3 class="t-14 t-black t-bold">
+            <span class="visually-hidden">Title</span>
+            <span>Principal Consultant</span>
+          </h3>
+<!---->            <div class="display-flex">
+              <h4 class="pv-entity__date-range t-14 t-black--light t-normal">
+                <span class="visually-hidden">Dates Employed</span>
+                <span>Sep 1995 – Mar 1999</span>
+              </h4>
+                <h4 class="t-14 t-black--light t-normal">
+                  <span class="visually-hidden">Employment Duration</span>
+                  <span class="pv-entity__bullet-item-v2">3 yrs 7 mos</span>
+                </h4>
+            </div>
+
+<!----><!---->        </div>
+
+
+          <div id="ember162" class="pv-entity__extra-details t-14 t-black--light ember-view"><p style="line-height:2rem;max-height:8rem;" id="ember163" class="pv-entity__description t-14 t-black t-normal inline-show-more-text inline-show-more-text--is-collapsed ember-view">  Client servicing <br>Developing the fledgling BI group in PwC. Started out the group with 3 people. That team has now produced over 14 Partners / Directors in Big 4, Accenture, IBM and a large number of outstanding Analytics professionals in concerns like HDFC, Amex, Oracle, TCS, CTS, Teradata amongst others.
+
+<!----></p><!----></div>
+      </div>
+    </div>
+
+<!---->  </div>
+</div>
+</div>
+        </li>
+    </ul>
+
+<!----></section>
+</li><li id="ember165" class="pv-entity__position-group-pager pv-profile-section__list-item ember-view">        <section id="23153691" class="pv-profile-section__card-item-v2 pv-profile-section pv-position-entity ember-view">  <div class="display-flex justify-space-between full-width">
+    <div class="display-flex flex-column full-width">
+<a data-control-name="background_details_company" href="/company/pwc/" id="ember167" class="full-width ember-view">          <div class="pv-entity__logo company-logo">
+  <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQFprRTe6CgN7A/company-logo_100_100/0/1593613945636?e=1619049600&amp;v=beta&amp;t=9vR-mn3xfL4tTnv4F7DLot6z7-amSE5TXe0rQUlIF8g" loading="lazy" alt="PwC" id="ember169" class="pv-entity__logo-img EntityPhoto-square-5 lazy-image ember-view">
+</div>
+<div class="pv-entity__summary-info pv-entity__summary-info--background-section mb2">
+  <h3 class="t-16 t-black t-bold">Associate, Senior Analyst</h3>
+  <p class="visually-hidden">Company Name</p>
+  <p class="pv-entity__secondary-title t-14 t-black t-normal">
+      PwC
+<!---->  </p>
+    <div class="display-flex">
+    <h4 class="pv-entity__date-range t-14 t-black--light t-normal">
+      <span class="visually-hidden">Dates Employed</span>
+      <span>Aug 1992 – Jul 1995</span>
+    </h4>
+      <h4 class="t-14 t-black--light t-normal">
+        <span class="visually-hidden">Employment Duration</span>
+        <span class="pv-entity__bullet-item-v2">3 yrs</span>
+      </h4>
+  </div>
+
+<!---->
+<!---->
+</div>
+
+</a>
+        <div id="ember171" class="pv-entity__extra-details t-14 t-black--light ember-view"><p style="line-height:2rem;max-height:8rem;" id="ember172" class="pv-entity__description t-14 t-black t-normal inline-show-more-text inline-show-more-text--is-collapsed ember-view">  Design and development of software systems
+
+<!----></p><!----></div>
+    </div>
+
+<!---->  </div>
+</section>
+</li>  </ul>
+
+<!----></section>
+</div>
+<div id="ember173" class="pv-profile-section-pager ember-view"><section id="education-section" class="pv-profile-section education-section ember-view"><header class="pv-profile-section__card-header">
+  <h2 class="pv-profile-section__card-heading">
+    Education
+  </h2>
+
+<!----></header>
+
+  <ul class="pv-profile-section__section-info section-info pv-profile-section__section-info--has-more">
+      <li id="12306461" class="pv-profile-section__list-item pv-education-entity pv-profile-section__card-item ember-view"><div class="display-flex justify-space-between full-width">
+  <div class="display-flex flex-column full-width">
+<a data-control-name="background_details_school" href="/school/18321/?legacySchoolId=18321" id="ember177" class="ember-view">        <div class="pv-entity__logo">
+  <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQGFFDl_Z9pIAA/company-logo_100_100/0/1595014871850?e=1619049600&amp;v=beta&amp;t=itDi7PS5vhqVJv6ZNnoyo2UgUES5sC6QtL58EnHvN20" loading="lazy" alt="University of Illinois at Urbana-Champaign" id="ember179" class="pv-entity__logo-img pv-entity__logo-img EntityPhoto-square-4 lazy-image ember-view">
+</div>
+
+<div class="pv-entity__summary-info pv-entity__summary-info--background-section">
+  <div class="pv-entity__degree-info">
+    <h3 class="pv-entity__school-name t-16 t-black t-bold">University of Illinois at Urbana-Champaign</h3>
+
+      <p class="pv-entity__secondary-title pv-entity__degree-name t-14 t-black t-normal">
+        <span class="visually-hidden">Degree Name</span>
+        <span class="pv-entity__comma-item">MBA</span>
+      </p>
+      <p class="pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal">
+        <span class="visually-hidden">Field Of Study</span>
+        <span class="pv-entity__comma-item">Business</span>
+      </p>
+<!---->  </div>
+
+    <p class="pv-entity__dates t-14 t-black--light t-normal">
+      <span class="visually-hidden">Dates attended or expected graduation</span>
+      <span>
+            <time>1990</time> – <time>1992</time>
+      </span>
+    </p>
+
+    <p class="pv-entity__secondary-title t-14 t-black--light t-normal">
+      <span class="activities-label">Activities and Societies:</span>
+      <span class="activities-societies">International MBA Students</span>
+    </p>
+</div>
+
+</a>
+      <div id="ember180" class="pv-entity__extra-details t-14 t-black--light ember-view"><p class="pv-entity__description t-14 t-normal mt4">
+  MBA in Management and Technology. Worked at the Office of Information Management and in independent research projects on use of Machine Learning at the Beckman Institute of Artificial Intelligence
+</p>
+
+<!----></div>
+  </div>
+
+<!----></div>
+</li>
+      <li id="12306424" class="pv-profile-section__list-item pv-education-entity pv-profile-section__card-item ember-view"><div class="display-flex justify-space-between full-width">
+  <div class="display-flex flex-column full-width">
+<a data-control-name="background_details_school" href="/school/18874/?legacySchoolId=18874" id="ember183" class="ember-view">        <div class="pv-entity__logo">
+  <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQHqUfjGYibhWg/company-logo_100_100/0/1598375954605?e=1619049600&amp;v=beta&amp;t=tTO8x2F4tEywPcp9guxbjpmNvP4-fUal2mDFlkL0-i0" loading="lazy" alt="Rutgers, The State University of New Jersey-New Brunswick" id="ember185" class="pv-entity__logo-img pv-entity__logo-img EntityPhoto-square-4 lazy-image ember-view">
+</div>
+
+<div class="pv-entity__summary-info pv-entity__summary-info--background-section">
+  <div class="pv-entity__degree-info">
+    <h3 class="pv-entity__school-name t-16 t-black t-bold">Rutgers, The State University of New Jersey-New Brunswick</h3>
+
+      <p class="pv-entity__secondary-title pv-entity__degree-name t-14 t-black t-normal">
+        <span class="visually-hidden">Degree Name</span>
+        <span class="pv-entity__comma-item">MS, Master's Thesis in Artificial Intelligence</span>
+      </p>
+      <p class="pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal">
+        <span class="visually-hidden">Field Of Study</span>
+        <span class="pv-entity__comma-item">Computer Science</span>
+      </p>
+<!---->  </div>
+
+    <p class="pv-entity__dates t-14 t-black--light t-normal">
+      <span class="visually-hidden">Dates attended or expected graduation</span>
+      <span>
+            <time>1988</time> – <time>1990</time>
+      </span>
+    </p>
+
+    <p class="pv-entity__secondary-title t-14 t-black--light t-normal">
+      <span class="activities-label">Activities and Societies:</span>
+      <span class="activities-societies">Graduate Students Association</span>
+    </p>
+</div>
+
+</a>
+      <div id="ember186" class="pv-entity__extra-details t-14 t-black--light ember-view"><p class="pv-entity__description t-14 t-normal mt4">
+  Worked as a Teaching Assistant and then an Instructor for CS 101. Also worked as a TA for Database Systems for a summers course. 
+</p>
+
+<!----></div>
+  </div>
+
+<!----></div>
+</li>
+      <li id="2609473" class="pv-profile-section__list-item pv-education-entity pv-profile-section__card-item ember-view"><div class="display-flex justify-space-between full-width">
+  <div class="display-flex flex-column full-width">
+<a data-control-name="background_details_school" href="/school/13513/?legacySchoolId=13513" id="ember189" class="ember-view">        <div class="pv-entity__logo">
+  <img src="https://media-exp1.licdn.com/dms/image/C510BAQFkGVsBobrK1A/company-logo_100_100/0/1553409868557?e=1619049600&amp;v=beta&amp;t=cMb3N46xibsHdk3oH4luN7JtWZr8WvMCo8zhjBflwJA" loading="lazy" alt="Jadavpur University" id="ember191" class="pv-entity__logo-img pv-entity__logo-img EntityPhoto-square-4 lazy-image ember-view">
+</div>
+
+<div class="pv-entity__summary-info pv-entity__summary-info--background-section">
+  <div class="pv-entity__degree-info">
+    <h3 class="pv-entity__school-name t-16 t-black t-bold">Jadavpur University</h3>
+
+      <p class="pv-entity__secondary-title pv-entity__degree-name t-14 t-black t-normal">
+        <span class="visually-hidden">Degree Name</span>
+        <span class="pv-entity__comma-item">BTech</span>
+      </p>
+      <p class="pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal">
+        <span class="visually-hidden">Field Of Study</span>
+        <span class="pv-entity__comma-item">Computer Science</span>
+      </p>
+<!---->  </div>
+
+    <p class="pv-entity__dates t-14 t-black--light t-normal">
+      <span class="visually-hidden">Dates attended or expected graduation</span>
+      <span>
+            <time>1984</time> – <time>1988</time>
+      </span>
+    </p>
+
+    <p class="pv-entity__secondary-title t-14 t-black--light t-normal">
+      <span class="activities-label">Activities and Societies:</span>
+      <span class="activities-societies">Debate Team</span>
+    </p>
+</div>
+
+</a>
+      <div id="ember192" class="pv-entity__extra-details t-14 t-black--light ember-view"><p class="pv-entity__description t-14 t-normal mt4">
+  Studied Computer Science
+</p>
+
+<!----></div>
+  </div>
+
+<!----></div>
+</li>
+  </ul>
+
+  <div id="ember193" class="pv-profile-section__actions-inline ember-view"><button class="pv-profile-section__see-more-inline pv-profile-section__text-truncate-toggle artdeco-button artdeco-button--tertiary artdeco-button--muted" aria-expanded="false" type="button">Show 2 more education
+<li-icon aria-hidden="true" type="chevron-down-icon" class="pv-profile-section__toggle-detail-icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M1 5l7 4.61L15 5v2.39L8 12 1 7.39z"></path>
+</svg></li-icon></button>
+
+<!----></div>
+</section>
+</div>
+<!---->
+<!----></section>
+</div>
+            </span>
+
+</div>
+<div style="min-height: 145px" id="ember85" class="pv-deferred-area pv-deferred-area--pending pv-deferred-area--occluded ember-view">  <div id="ember86" class="pv-deferred-area__loader pv-deferred-area__loader--dark artdeco-loader ember-view"><!---->
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+</div>
+</div>
+<div style="min-height: 285px" id="ember88" class="pv-deferred-area pv-deferred-area--pending pv-deferred-area--occluded ember-view">  <div id="ember89" class="pv-deferred-area__loader pv-deferred-area__loader--dark artdeco-loader ember-view"><!---->
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+</div>
+</div>
+<div id="ember90" class="pv-occludable__accomplishments ember-view"><!----></div>
+<div style="min-height: 200px" id="ember92" class="pv-deferred-area pv-deferred-area--pending pv-deferred-area--occluded ember-view">  <div id="ember93" class="pv-deferred-area__loader pv-deferred-area__loader--dark artdeco-loader ember-view"><!---->
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+<span class="artdeco-loader__bars"></span>
+</div>
+</div>        </div>
+      </main>
+      <div class="pv-content__right-rail right-rail">
+<!---->
+<!---->
+        <div id="ember94" class="ember-view"><section id="ember95" class="ad-banner-container ember-view"><iframe class="ad-banner" width="300" height="250" src="about:blank" scrolling="no" title="advertisement"></iframe>
+
+<!---->
+<!---->
+<!----></section></div>
+
+<div style="" id="ember97" class="pv-deferred-area ember-view">  <div class="pv-deferred-area__content">
+                    <section id="ember235" class="artdeco-card pv-browsemap-section__wrapper ember-view">  <div class="pv-browsemap-section">
+    <h2 class="t-20 t-black t-normal">People also viewed</h2>
+
+<!---->
+    <ul class="browsemap">
+        <li id="ember237" class="pv-browsemap-section__member-container-line pv-browsemap-section__member-container ember-view"><a data-control-name="browsemap_profile" href="/in/swatishandilya/" id="ember238" class="pv-browsemap-section__member ember-view">    <img width="56" src="https://media-exp1.licdn.com/dms/image/C5103AQH3q8IJk9_tQg/profile-displayphoto-shrink_100_100/0/1575025636071?e=1616630400&amp;v=beta&amp;t=tTlvSb03iIjUoLMcZZF06uUbfQEYAok-VP5SQxmxT7w" loading="lazy" height="56" alt="member_name" id="ember239" class="lazy-image pv-browsemap-section__member-imageEntityPhoto-circle-4 ember-view">
+    <div class="pv-browsemap-section__member-detail pl2">
+      <h3 id="ember240" class="actor-name-with-distance ember-view pv-browsemap-section__member-detail--has-hover pv-browsemap-section__member-distance-and-badge--display-block">  <span class="name-and-icon"><span class="name">Swati Shandilya</span>
+      <span class="distance-and-badge">
+        <span data-test-distance-badge="" id="ember241" class="distance-badge separator ember-view"><span class="visually-hidden">
+    3rd degree connection
+</span>
+<span class="dist-value">3rd</span>
+</span><!---->      </span>
+</span>
+
+
+</h3>
+
+      <p class="pv-browsemap-section__member-headline t-14 t-black t-normal">
+        <div style="line-height:2rem;max-height:4rem;-webkit-line-clamp:2;" id="ember242" class="inline-show-more-text inline-show-more-text--is-collapsed inline-show-more-text--is-collapsed-with-line-clamp ember-view">  Deputy Manager - Talent at Deloitte India
+
+<!----></div>
+      </p>
+    </div>
+</a>
+  <div>
+<!---->
+<!---->
+<!---->
+<!---->
+        <div id="ember244" class="ember-view" data-control-name="browsemap_follow"><div id="ember245" class="ember-view">    <button data-control-name="" id="ember246" class="ml4 pv-s-profile-actions pv-s-profile-actions--follow pv-browsemap-section__member-cta-button ml4 artdeco-button artdeco-button--circle artdeco-button--muted artdeco-button--1 artdeco-button--tertiary ember-view" type="button">  <li-icon aria-hidden="true" type="plus-icon" class="artdeco-button__icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M14 9H9v5H7V9H2V7h5V2h2v5h5z"></path>
+</svg></li-icon>
+
+<span class="artdeco-button__text">
+    Follow Swati Shandilya
+</span></button>
+</div></div>
+  </div>
+
+
+</li>
+        <li id="ember248" class="pv-browsemap-section__member-container-line pv-browsemap-section__member-container ember-view"><a data-control-name="browsemap_profile" href="/in/sudipta-bandyopadhyay-43593421/" id="ember249" class="pv-browsemap-section__member ember-view">    <img width="56" src="https://media-exp1.licdn.com/dms/image/C4D03AQGZ33UJhCvsaA/profile-displayphoto-shrink_100_100/0/1516953565439?e=1616630400&amp;v=beta&amp;t=e3xcibqwTVesBmYq53FBzKt9nexhp2XgnwVldAFcej8" loading="lazy" height="56" alt="member_name" id="ember250" class="lazy-image pv-browsemap-section__member-imageEntityPhoto-circle-4 ember-view">
+    <div class="pv-browsemap-section__member-detail pl2">
+      <h3 id="ember251" class="actor-name-with-distance ember-view pv-browsemap-section__member-detail--has-hover pv-browsemap-section__member-distance-and-badge--display-block">  <span class="name-and-icon"><span class="name">Sudipta Bandyopadhyay</span>
+      <span class="distance-and-badge">
+        <span data-test-distance-badge="" id="ember252" class="distance-badge separator ember-view"><span class="visually-hidden">
+    3rd degree connection
+</span>
+<span class="dist-value">3rd</span>
+</span><!---->      </span>
+</span>
+
+
+</h3>
+
+      <p class="pv-browsemap-section__member-headline t-14 t-black t-normal">
+        <div style="line-height:2rem;max-height:4rem;-webkit-line-clamp:2;" id="ember253" class="inline-show-more-text inline-show-more-text--is-collapsed inline-show-more-text--is-collapsed-with-line-clamp ember-view">  Partner at Price Waterhouse Coopers
+
+<!----></div>
+      </p>
+    </div>
+</a>
+  <div>
+       <div id="ember255" class="ember-view" data-control-name="browsemap_connect"><div id="ember256" class="ember-view">    <button id="ember257" class="ml4 pv-s-profile-actions pv-s-profile-actions--connect pv-browsemap-section__member-cta-button ml4 artdeco-button artdeco-button--circle artdeco-button--muted artdeco-button--1 artdeco-button--tertiary ember-view" type="button">  <li-icon aria-hidden="true" type="connect-icon" class="artdeco-button__icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z"></path>
+</svg></li-icon>
+
+<span class="artdeco-button__text">
+    Connect with Sudipta Bandyopadhyay
+</span></button>
+</div><!----></div>
+
+<!---->
+<!---->
+<!---->
+<!---->  </div>
+
+
+</li>
+        <li id="ember259" class="pv-browsemap-section__member-container-line pv-browsemap-section__member-container ember-view"><a data-control-name="browsemap_profile" href="/in/sweta-kabra-85b74617/" id="ember260" class="pv-browsemap-section__member ember-view">    <img width="56" src="https://media-exp1.licdn.com/dms/image/C4D03AQFSmUYjhfU9IQ/profile-displayphoto-shrink_100_100/0/1516763148339?e=1616630400&amp;v=beta&amp;t=NMtUdxCgDYRfnYWPJ8TOEVVohTN80DsLT68N8T3tNjo" loading="lazy" height="56" alt="member_name" id="ember261" class="lazy-image pv-browsemap-section__member-imageEntityPhoto-circle-4 ember-view">
+    <div class="pv-browsemap-section__member-detail pl2">
+      <h3 id="ember262" class="actor-name-with-distance ember-view pv-browsemap-section__member-detail--has-hover pv-browsemap-section__member-distance-and-badge--display-block">  <span class="name-and-icon"><span class="name">Sweta Kabra</span>
+      <span class="distance-and-badge">
+        <span data-test-distance-badge="" id="ember263" class="distance-badge separator ember-view"><span class="visually-hidden">
+    3rd degree connection
+</span>
+<span class="dist-value">3rd</span>
+</span><!---->      </span>
+</span>
+
+
+</h3>
+
+      <p class="pv-browsemap-section__member-headline t-14 t-black t-normal">
+        <div style="line-height:2rem;max-height:4rem;-webkit-line-clamp:2;" id="ember264" class="inline-show-more-text inline-show-more-text--is-collapsed inline-show-more-text--is-collapsed-with-line-clamp ember-view">  Director at PwC
+
+<!----></div>
+      </p>
+    </div>
+</a>
+  <div>
+       <div id="ember266" class="ember-view" data-control-name="browsemap_connect"><div id="ember267" class="ember-view">    <button id="ember268" class="ml4 pv-s-profile-actions pv-s-profile-actions--connect pv-browsemap-section__member-cta-button ml4 artdeco-button artdeco-button--circle artdeco-button--muted artdeco-button--1 artdeco-button--tertiary ember-view" type="button">  <li-icon aria-hidden="true" type="connect-icon" class="artdeco-button__icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z"></path>
+</svg></li-icon>
+
+<span class="artdeco-button__text">
+    Connect with Sweta Kabra
+</span></button>
+</div><!----></div>
+
+<!---->
+<!---->
+<!---->
+<!---->  </div>
+
+
+</li>
+        <li id="ember270" class="pv-browsemap-section__member-container-line pv-browsemap-section__member-container ember-view"><a data-control-name="browsemap_profile" href="/in/manoj-chandak-75a9a92/" id="ember271" class="pv-browsemap-section__member ember-view">    <img width="56" src="https://media-exp1.licdn.com/dms/image/C5603AQFvPQjg6HeV0Q/profile-displayphoto-shrink_100_100/0/1589685817155?e=1616630400&amp;v=beta&amp;t=2uy2R6uouRto9iRnvi0Q0NQ4WZOKZhM9z4Gbs84ThTA" loading="lazy" height="56" alt="member_name" id="ember272" class="lazy-image pv-browsemap-section__member-imageEntityPhoto-circle-4 ember-view">
+    <div class="pv-browsemap-section__member-detail pl2">
+      <h3 id="ember273" class="actor-name-with-distance ember-view pv-browsemap-section__member-detail--has-hover pv-browsemap-section__member-distance-and-badge--display-block">  <span class="name-and-icon"><span class="name">Manoj Chandak</span>
+      <span class="distance-and-badge">
+        <span data-test-distance-badge="" id="ember274" class="distance-badge separator ember-view"><span class="visually-hidden">
+    3rd degree connection
+</span>
+<span class="dist-value">3rd</span>
+</span><!---->      </span>
+</span>
+
+
+</h3>
+
+      <p class="pv-browsemap-section__member-headline t-14 t-black t-normal">
+        <div style="line-height:2rem;max-height:4rem;-webkit-line-clamp:2;" id="ember275" class="inline-show-more-text inline-show-more-text--is-collapsed inline-show-more-text--is-collapsed-with-line-clamp ember-view">  Director at Deloitte India
+
+<!----></div>
+      </p>
+    </div>
+</a>
+  <div>
+       <div id="ember277" class="ember-view" data-control-name="browsemap_connect"><div id="ember278" class="ember-view">    <button id="ember279" class="ml4 pv-s-profile-actions pv-s-profile-actions--connect pv-browsemap-section__member-cta-button ml4 artdeco-button artdeco-button--circle artdeco-button--muted artdeco-button--1 artdeco-button--tertiary ember-view" type="button">  <li-icon aria-hidden="true" type="connect-icon" class="artdeco-button__icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z"></path>
+</svg></li-icon>
+
+<span class="artdeco-button__text">
+    Connect with Manoj Chandak
+</span></button>
+</div><!----></div>
+
+<!---->
+<!---->
+<!---->
+<!---->  </div>
+
+
+</li>
+        <li id="ember281" class="pv-browsemap-section__member-container-line pv-browsemap-section__member-container ember-view"><a data-control-name="browsemap_profile" href="/in/shomik-dasgupta-1a1ab22/" id="ember282" class="pv-browsemap-section__member ember-view">    <img width="56" src="https://media-exp1.licdn.com/dms/image/C4D03AQGFOBaCMp_SUg/profile-displayphoto-shrink_100_100/0/1609179471628?e=1616630400&amp;v=beta&amp;t=AzI46NfNdtWd7QxamD4CcQF7rRxpIhdFoCZMdRYZmEI" loading="lazy" height="56" alt="member_name" id="ember283" class="lazy-image pv-browsemap-section__member-imageEntityPhoto-circle-4 ember-view">
+    <div class="pv-browsemap-section__member-detail pl2">
+      <h3 id="ember284" class="actor-name-with-distance ember-view pv-browsemap-section__member-detail--has-hover pv-browsemap-section__member-distance-and-badge--display-block">  <span class="name-and-icon"><span class="name">Shomik Dasgupta</span>
+      <span class="distance-and-badge">
+        <span data-test-distance-badge="" id="ember285" class="distance-badge separator ember-view"><span class="visually-hidden">
+    3rd degree connection
+</span>
+<span class="dist-value">3rd</span>
+</span><!---->      </span>
+</span>
+
+
+</h3>
+
+      <p class="pv-browsemap-section__member-headline t-14 t-black t-normal">
+        <div style="line-height:2rem;max-height:4rem;-webkit-line-clamp:2;" id="ember286" class="inline-show-more-text inline-show-more-text--is-collapsed inline-show-more-text--is-collapsed-with-line-clamp ember-view">  Partner at PwC
+
+<!----></div>
+      </p>
+    </div>
+</a>
+  <div>
+       <div id="ember288" class="ember-view" data-control-name="browsemap_connect"><div id="ember289" class="ember-view">    <button id="ember290" class="ml4 pv-s-profile-actions pv-s-profile-actions--connect pv-browsemap-section__member-cta-button ml4 artdeco-button artdeco-button--circle artdeco-button--muted artdeco-button--1 artdeco-button--tertiary ember-view" type="button">  <li-icon aria-hidden="true" type="connect-icon" class="artdeco-button__icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z"></path>
+</svg></li-icon>
+
+<span class="artdeco-button__text">
+    Connect with Shomik Dasgupta
+</span></button>
+</div><!----></div>
+
+<!---->
+<!---->
+<!---->
+<!---->  </div>
+
+
+</li>
+    </ul>
+
+<!---->  </div>
+
+    <button id="ember291" class="pv-browsemap-section__show-cta artdeco-card__action artdeco-button artdeco-button--muted artdeco-button--icon-right artdeco-button--2 artdeco-button--fluid artdeco-button--tertiary ember-view">  <li-icon aria-hidden="true" type="chevron-down-icon" class="artdeco-button__icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M1 5l7 4.61L15 5v2.39L8 12 1 7.39z"></path>
+</svg></li-icon>
+
+<span class="artdeco-button__text">
+    Show more
+</span></button>
+
+</section>
+
+            <div class="pv-profile-pymk__container artdeco-card">
+  <section class="pt5 pb3 ph4">
+    <h2 class="t-20 t-black t-normal">
+      People you may know
+    </h2>
+
+    <ul class="pv-profile-pymk__list">
+        <li class="pv-pymk-section__member-container">
+  <a data-control-name="pymk_profile" href="/in/priyankaojha18/" id="ember293" class="ember-view pv-pymk-section__member">
+    <img width="56" src="https://media-exp1.licdn.com/dms/image/C5603AQHvES2gUhQsUA/profile-displayphoto-shrink_100_100/0/1605203134209?e=1616630400&amp;v=beta&amp;t=C_LHSY1oC619SF288wUQdVVFZZjj58dygisXHx0cKbU" loading="lazy" height="56" alt="Priyanka O." id="ember294" class="lazy-image pv-pymk-section__member-image EntityPhoto-circle-4 ember-view">
+
+    <div class="pv-pymk-section__member-detail">
+      <h3 id="ember295" class="actor-name-with-distance ember-view pv-pymk-section__member-detail--has-hover">  <span class="name-and-icon"><span class="name">Priyanka O.</span>
+      <span class="distance-and-badge">
+        <span data-test-distance-badge="" id="ember296" class="distance-badge hidden separator ember-view"><span class="visually-hidden">
+    {:distance}
+</span>
+<span class="dist-value">{:distance}</span>
+</span><!---->      </span>
+</span>
+
+
+</h3>
+      <p class="pv-pymk-section__member-headline t-14 t-black t-normal">
+        <div style="line-height:2rem;max-height:4rem;-webkit-line-clamp:2;" id="ember297" class="inline-show-more-text inline-show-more-text--is-collapsed inline-show-more-text--is-collapsed-with-line-clamp ember-view">  Technical Recruiter- Looking for new opportunities- Authorized to work for any employer in USA
+
+<!---->
+<!----></div>
+      </p>
+    </div>
+  </a>
+
+  <div class="pv-pymk-section__member-cta">
+      <button id="ember298" class="pv-pymk-section__member-cta-button artdeco-button artdeco-button--circle artdeco-button--muted artdeco-button--1 artdeco-button--secondary ember-view" data-control-name="pymk_connect" type="button">  <li-icon aria-hidden="true" type="connect-icon" class="artdeco-button__icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z"></path>
+</svg></li-icon>
+
+<span class="artdeco-button__text">
+    Connect
+</span></button>
+  </div>
+
+<!----></li>
+
+<!---->
+
+
+
+        <li class="pv-pymk-section__member-container">
+  <a data-control-name="pymk_profile" href="/in/sundeepa-vadithela-0b919381/" id="ember300" class="ember-view pv-pymk-section__member">
+    <img width="56" src="https://media-exp1.licdn.com/dms/image/C4E03AQGEgNrizekOnw/profile-displayphoto-shrink_100_100/0/1516842579878?e=1616630400&amp;v=beta&amp;t=9tBlYTsNKLZR4sBijZNgytuT6DkhWUm9WzaelUWpIVQ" loading="lazy" height="56" alt="Sundeepa Vadithela" id="ember301" class="lazy-image pv-pymk-section__member-image EntityPhoto-circle-4 ember-view">
+
+    <div class="pv-pymk-section__member-detail">
+      <h3 id="ember302" class="actor-name-with-distance ember-view pv-pymk-section__member-detail--has-hover">  <span class="name-and-icon"><span class="name">Sundeepa Vadithela</span>
+      <span class="distance-and-badge">
+        <span data-test-distance-badge="" id="ember303" class="distance-badge hidden separator ember-view"><span class="visually-hidden">
+    {:distance}
+</span>
+<span class="dist-value">{:distance}</span>
+</span><!---->      </span>
+</span>
+
+
+</h3>
+      <p class="pv-pymk-section__member-headline t-14 t-black t-normal">
+        <div style="line-height:2rem;max-height:4rem;-webkit-line-clamp:2;" id="ember304" class="inline-show-more-text inline-show-more-text--is-collapsed inline-show-more-text--is-collapsed-with-line-clamp ember-view">  Hiring Talent
+
+<!----></div>
+      </p>
+    </div>
+  </a>
+
+  <div class="pv-pymk-section__member-cta">
+      <button id="ember305" class="pv-pymk-section__member-cta-button artdeco-button artdeco-button--circle artdeco-button--muted artdeco-button--1 artdeco-button--secondary ember-view" data-control-name="pymk_connect" type="button">  <li-icon aria-hidden="true" type="connect-icon" class="artdeco-button__icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z"></path>
+</svg></li-icon>
+
+<span class="artdeco-button__text">
+    Connect
+</span></button>
+  </div>
+
+<!----></li>
+
+<!---->
+
+
+
+        <li class="pv-pymk-section__member-container">
+  <a data-control-name="pymk_profile" href="/in/parimita-mishra-83193a8b/" id="ember307" class="ember-view pv-pymk-section__member">
+    <img width="56" src="https://media-exp1.licdn.com/dms/image/C4E03AQHwtWkj7TkPKw/profile-displayphoto-shrink_100_100/0/1517371797591?e=1616630400&amp;v=beta&amp;t=b5XMz21zCSTZDuLDmra3ddeLdxYQfeTwrpAiyc2JSnM" loading="lazy" height="56" alt="Parimita Mishra" id="ember308" class="lazy-image pv-pymk-section__member-image EntityPhoto-circle-4 ember-view">
+
+    <div class="pv-pymk-section__member-detail">
+      <h3 id="ember309" class="actor-name-with-distance ember-view pv-pymk-section__member-detail--has-hover">  <span class="name-and-icon"><span class="name">Parimita Mishra</span>
+      <span class="distance-and-badge">
+        <span data-test-distance-badge="" id="ember310" class="distance-badge hidden separator ember-view"><span class="visually-hidden">
+    {:distance}
+</span>
+<span class="dist-value">{:distance}</span>
+</span><!---->      </span>
+</span>
+
+
+</h3>
+      <p class="pv-pymk-section__member-headline t-14 t-black t-normal">
+        <div style="line-height:2rem;max-height:4rem;-webkit-line-clamp:2;" id="ember311" class="inline-show-more-text inline-show-more-text--is-collapsed inline-show-more-text--is-collapsed-with-line-clamp ember-view">  Global Talent Acquisition and Mapping (APAC/EMEA/USA) at Verizon
+
+<!---->
+<!----></div>
+      </p>
+    </div>
+  </a>
+
+  <div class="pv-pymk-section__member-cta">
+      <button id="ember312" class="pv-pymk-section__member-cta-button artdeco-button artdeco-button--circle artdeco-button--muted artdeco-button--1 artdeco-button--secondary ember-view" data-control-name="pymk_connect" type="button">  <li-icon aria-hidden="true" type="connect-icon" class="artdeco-button__icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z"></path>
+</svg></li-icon>
+
+<span class="artdeco-button__text">
+    Connect
+</span></button>
+  </div>
+
+<!----></li>
+
+<!---->
+
+
+
+        <li class="pv-pymk-section__member-container">
+  <a data-control-name="pymk_profile" href="/in/vivek-kumar-42858b44/" id="ember314" class="ember-view pv-pymk-section__member">
+    <img width="56" src="https://media-exp1.licdn.com/dms/image/C5103AQHf3pAfbAxYyA/profile-displayphoto-shrink_100_100/0/1545735317534?e=1616630400&amp;v=beta&amp;t=8YdxOZWJhTjPifT9G3ezYodNd5FFZs3FNgCGaZW5PUw" loading="lazy" height="56" alt="VIVEK KUMAR" id="ember315" class="lazy-image pv-pymk-section__member-image EntityPhoto-circle-4 ember-view">
+
+    <div class="pv-pymk-section__member-detail">
+      <h3 id="ember316" class="actor-name-with-distance ember-view pv-pymk-section__member-detail--has-hover">  <span class="name-and-icon"><span class="name">VIVEK KUMAR</span>
+      <span class="distance-and-badge">
+        <span data-test-distance-badge="" id="ember317" class="distance-badge hidden separator ember-view"><span class="visually-hidden">
+    {:distance}
+</span>
+<span class="dist-value">{:distance}</span>
+</span><!---->      </span>
+</span>
+
+
+</h3>
+      <p class="pv-pymk-section__member-headline t-14 t-black t-normal">
+        <div style="line-height:2rem;max-height:4rem;-webkit-line-clamp:2;" id="ember318" class="inline-show-more-text inline-show-more-text--is-collapsed inline-show-more-text--is-collapsed-with-line-clamp ember-view">  HR-Talent Acquisition at Intelliswift Software, Inc.
+
+<!----></div>
+      </p>
+    </div>
+  </a>
+
+  <div class="pv-pymk-section__member-cta">
+      <button id="ember319" class="pv-pymk-section__member-cta-button artdeco-button artdeco-button--circle artdeco-button--muted artdeco-button--1 artdeco-button--secondary ember-view" data-control-name="pymk_connect" type="button">  <li-icon aria-hidden="true" type="connect-icon" class="artdeco-button__icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z"></path>
+</svg></li-icon>
+
+<span class="artdeco-button__text">
+    Connect
+</span></button>
+  </div>
+
+<!----></li>
+
+<!---->
+
+
+
+        <li class="pv-pymk-section__member-container">
+  <a data-control-name="pymk_profile" href="/in/bonnie-ghosh-723567136/" id="ember321" class="ember-view pv-pymk-section__member">
+    <img width="56" src="https://media-exp1.licdn.com/dms/image/C5103AQGfripjelygaA/profile-displayphoto-shrink_100_100/0/1582711266049?e=1616630400&amp;v=beta&amp;t=uZYtp3C1MgO6vDyZGhrpzpOxP_aEkd62ZhqozVgMgW4" loading="lazy" height="56" alt="Bonnie Ghosh" id="ember322" class="lazy-image pv-pymk-section__member-image EntityPhoto-circle-4 ember-view">
+
+    <div class="pv-pymk-section__member-detail">
+      <h3 id="ember323" class="actor-name-with-distance ember-view pv-pymk-section__member-detail--has-hover">  <span class="name-and-icon"><span class="name">Bonnie Ghosh</span>
+      <span class="distance-and-badge">
+        <span data-test-distance-badge="" id="ember324" class="distance-badge hidden separator ember-view"><span class="visually-hidden">
+    {:distance}
+</span>
+<span class="dist-value">{:distance}</span>
+</span><!---->      </span>
+</span>
+
+
+</h3>
+      <p class="pv-pymk-section__member-headline t-14 t-black t-normal">
+        <div style="line-height:2rem;max-height:4rem;-webkit-line-clamp:2;" id="ember325" class="inline-show-more-text inline-show-more-text--is-collapsed inline-show-more-text--is-collapsed-with-line-clamp ember-view">  Operations Manager at StickyPins.Inc
+
+<!----></div>
+      </p>
+    </div>
+  </a>
+
+  <div class="pv-pymk-section__member-cta">
+      <button id="ember326" class="pv-pymk-section__member-cta-button artdeco-button artdeco-button--circle artdeco-button--muted artdeco-button--1 artdeco-button--secondary ember-view" data-control-name="pymk_connect" type="button">  <li-icon aria-hidden="true" type="connect-icon" class="artdeco-button__icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z"></path>
+</svg></li-icon>
+
+<span class="artdeco-button__text">
+    Connect
+</span></button>
+  </div>
+
+<!----></li>
+
+<!---->
+
+
+
+    </ul>
+  </section>
+
+    <footer class="artdeco-card__actions">
+      <button id="ember327" class="pv-pymk-section__show-cta artdeco-button artdeco-button--muted artdeco-button--icon-right artdeco-button--2 artdeco-button--fluid artdeco-button--tertiary ember-view">  <li-icon aria-hidden="true" type="chevron-down-icon" class="artdeco-button__icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+  <path d="M1 5l7 4.61L15 5v2.39L8 12 1 7.39z"></path>
+</svg></li-icon>
+
+<span class="artdeco-button__text">
+    Show more
+</span></button>
+    </footer>
+</div>
+
+
+
+  </div>
+</div>
+<div id="ember131" class="ember-view">                  <section class="pv-course-recommendations artdeco-card">
+  <div class="pt4 ph4">
+  <linkedin-logo size="14dp" id="ember328" class="ember-view t-14"><li-icon aria-hidden="true" type="linkedin-bug" size="14dp" color="brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" data-supported-dps="14x14" fill="currentColor" class="mercado-match" width="14" height="14" focusable="false">
+  <g>
+    <path class="background-mercado" d="M14 1v12a1 1 0 01-1 1H1a1 1 0 01-1-1V1a1 1 0 011-1h12a1 1 0 011 1zM4 5H2v7h2zm.25-2A1.27 1.27 0 003 1.8 1.27 1.27 0 001.75 3 1.27 1.27 0 003 4.2 1.27 1.27 0 004.25 3zM12 8.29c0-2.2-.73-3.49-2.86-3.49A2.71 2.71 0 006.89 6V5H5v7h2V8.73A1.74 1.74 0 018.66 6.8C9.82 6.8 10 7.94 10 8.73V12h2z"></path>
+  </g>
+</svg></li-icon>
+<span class="logo-text ">
+  LEARNING
+</span></linkedin-logo>
+  <h3 class="t-16 mt2">
+    
+    
+      <div>
+<span>Add new skills with these courses</span></div>
+    
+    <!---->
+  
+  </h3>
+  
+    <!---->
+    
+      <ul class="list-style-none">
+          <li class="learning-recommendation-item display-flex">
+  <a tabindex="0" target="_blank" href="https://www.linkedin.com/learning/lean-technology-strategy-starting-your-business-transformation-2?courseClaim=AQHxBdx7B7_CAQAAAXckkuaS1o4f6gRBiQljbCTeJa35GBonvqnuLXrjn9FxERcoQT831msMD4VYYi-6HtNSOezMsERxZOCubCkeLKVCbFZ3MYDFDEqH5lBqQBOdpxxSODAFgLbFwqqEddHhXtKv23nilKK1EAQ-o8KEfoqcgjdd1FHf8zO_uSejoiH6JyuBlHCHSAP9RznuS8icn45CE6_eVPZcQeqvVByC7HIJFlWjpU51ipa2b01G-0_lfV1EDaRpdVTFOe62c-eUVkS3igDEYUomeO0zAZsF-4FJcqaohXc6z8pFhgev5m6lnZl5cW1icLDGEfGl2o53hVxxmyDHGbQpjKJXTbWwX7c0BhiKYR9-l8yjZeqnXmSESyawdTCKszBbbjLP46sVlN6eczSPMBfjflodwVDrHTHF5ZO5_-8kwkIH30gbmJwCMv8gC3M7HOif8EImNr0A7BKGimCJBK_G7cy3rT0_4Zi2PHgbIFO-ciEBHfRGvhfvbgqtgtv3IlCkU1IEA4FulPxK7dlKuENBXkQD44AK3oKkTOR0YdpOuijE7YsmLH0EvHtWKzOje4Oq1gIhSZfeFaEY3t0w4sQ2xXRicQdQ7gG8BOMplFi6wIRM4r6QEj1-Zl_eQyOmzapBQx04-ACh5PbFcZpmSW0PIIMFVu_KJ-wl1ESkI8ZBFO4GxczcGtPGTAMX5g&amp;isLearningSubscriber=false&amp;trk=profileNonSelf_d_flagship3_profile_view_base_learningFeedm015_737769_learning" id="ember334" class="learning-recommendation-item__thumbnail-container ember-view" aria-hidden="true">
+    <img src="https://media-exp1.licdn.com/dms/image/C4E0DAQHIpHUwGr5iBg/learning-public-crop_60_100/0/1567117985755?e=1611313200&amp;v=beta&amp;t=IM7GJjZrP-GmVWSTrMsU9EQmZRuMjCWasXKIE0otoBg" loading="lazy" id="ember335" class="learning-recommendation-item__image lazy-image ember-view">
+    <li-icon aria-hidden="true" type="play-icon" class="learning-recommendation-item__play-icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" width="16" height="16" focusable="false">
+  <path d="M15 8a.79.79 0 00-.38-.68L4 .88v14.25l10.62-6.45A.79.79 0 0015 8zM6 4.28L12.13 8 6 11.72V4.28z"></path>
+</svg></li-icon>
+  </a>
+  <div class="ml2 full-width">
+    <a tabindex="0" target="_blank" href="https://www.linkedin.com/learning/lean-technology-strategy-starting-your-business-transformation-2?courseClaim=AQHxBdx7B7_CAQAAAXckkuaS1o4f6gRBiQljbCTeJa35GBonvqnuLXrjn9FxERcoQT831msMD4VYYi-6HtNSOezMsERxZOCubCkeLKVCbFZ3MYDFDEqH5lBqQBOdpxxSODAFgLbFwqqEddHhXtKv23nilKK1EAQ-o8KEfoqcgjdd1FHf8zO_uSejoiH6JyuBlHCHSAP9RznuS8icn45CE6_eVPZcQeqvVByC7HIJFlWjpU51ipa2b01G-0_lfV1EDaRpdVTFOe62c-eUVkS3igDEYUomeO0zAZsF-4FJcqaohXc6z8pFhgev5m6lnZl5cW1icLDGEfGl2o53hVxxmyDHGbQpjKJXTbWwX7c0BhiKYR9-l8yjZeqnXmSESyawdTCKszBbbjLP46sVlN6eczSPMBfjflodwVDrHTHF5ZO5_-8kwkIH30gbmJwCMv8gC3M7HOif8EImNr0A7BKGimCJBK_G7cy3rT0_4Zi2PHgbIFO-ciEBHfRGvhfvbgqtgtv3IlCkU1IEA4FulPxK7dlKuENBXkQD44AK3oKkTOR0YdpOuijE7YsmLH0EvHtWKzOje4Oq1gIhSZfeFaEY3t0w4sQ2xXRicQdQ7gG8BOMplFi6wIRM4r6QEj1-Zl_eQyOmzapBQx04-ACh5PbFcZpmSW0PIIMFVu_KJ-wl1ESkI8ZBFO4GxczcGtPGTAMX5g&amp;isLearningSubscriber=false&amp;trk=profileNonSelf_d_flagship3_profile_view_base_learningFeedm015_737769_learning" id="ember336" class="ember-view">
+      <div id="ember337" class="t-14 t-black t-bold lt-line-clamp lt-line-clamp--multi-line ember-view" style="-webkit-line-clamp: 2">  Lean Technology Strategy: Starting Your Business Transformation
+
+<!----></div>
+    </a>
+    <div class="display-flex align-items-center justify-space-between mt4 t-12 t-black--light">
+      
+              <span>
+    7,640 viewers
+  </span>
+
+          
+    </div>
+  </div>
+</li>
+
+          <li class="learning-recommendation-item display-flex">
+  <a tabindex="0" target="_blank" href="https://www.linkedin.com/learning/learning-sap-sd-sales-and-distribution?courseClaim=AQEAe_0yiz17bQAAAXckkuaSLDiLMMLvM81BIWMDF6gsq88pRrSWcJnGXOoGqzYhHp9n2_nbn1DYNZ5kwt-93CLyMi1XCeUniaV5GrL9mOYcZ2h5gCJJi-4ROxGGh5jO3bS27_koZrKN87fh7WR2j4YAk1tpPU9NiZ1lqkzRInaDzvccqy3IlVSsQeNKk-3fVAUXBStkCcWQe85980lx4CqVCllNi9f3UyEsxeYYIrUJxMI4n_GLvXYwE59MUFza0hZ7Rhpnmn9dH2ttF8SUGu0nLCXK-0aPjS8wrcqpFYli1KP1Xd9z5i479JU2nlFGoApZSj8nOsnipIuNaQrSHP9yqb5TQP5eWmQJR_e6M_qZ4WBCwD-_i32AOsKkBnbOM7YeD3AmHNXXgQVKmimCCpCYUTZnoc7ojSxpl_LXUuDrDyyNthGuvml4qdny3aiZoduxp0iI2hspdSl57w3H_21BhjjxH6e52OuG2N3O9bUnN61O_mCPtWRRaloHOK_V3d_h8j26S3GbNT_95kUYbnCtiHk_0WJ8rWzCAouYjUgyPsb7XDSXmE7mqsRBiDR9QkDZ68we2CwPvOuCz0dSQWl_c2nS0Gs9vX0w_GwDt6hHZOKgca1TOS9c0sjLCSh7JI4uGYRkEVG2jQiVpz0hlB-9iNyGcbuVhK63RK3BHDcwNZ4R6Ohu6pr7GAvZ-_SdAO2l&amp;isLearningSubscriber=false&amp;trk=profileNonSelf_d_flagship3_profile_view_base_learningFeedm015_2809587_learning" id="ember339" class="learning-recommendation-item__thumbnail-container ember-view" aria-hidden="true">
+    <img src="https://media-exp1.licdn.com/dms/image/C4E0DAQG2Vi5bxCzsSg/learning-public-crop_60_100/0/1567117623415?e=1611313200&amp;v=beta&amp;t=QYQuT__8H2jgmQTn3uteSuujZJHt93s6zsXM6OdHGRI" loading="lazy" id="ember340" class="learning-recommendation-item__image lazy-image ember-view">
+    <li-icon aria-hidden="true" type="play-icon" class="learning-recommendation-item__play-icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" width="16" height="16" focusable="false">
+  <path d="M15 8a.79.79 0 00-.38-.68L4 .88v14.25l10.62-6.45A.79.79 0 0015 8zM6 4.28L12.13 8 6 11.72V4.28z"></path>
+</svg></li-icon>
+  </a>
+  <div class="ml2 full-width">
+    <a tabindex="0" target="_blank" href="https://www.linkedin.com/learning/learning-sap-sd-sales-and-distribution?courseClaim=AQEAe_0yiz17bQAAAXckkuaSLDiLMMLvM81BIWMDF6gsq88pRrSWcJnGXOoGqzYhHp9n2_nbn1DYNZ5kwt-93CLyMi1XCeUniaV5GrL9mOYcZ2h5gCJJi-4ROxGGh5jO3bS27_koZrKN87fh7WR2j4YAk1tpPU9NiZ1lqkzRInaDzvccqy3IlVSsQeNKk-3fVAUXBStkCcWQe85980lx4CqVCllNi9f3UyEsxeYYIrUJxMI4n_GLvXYwE59MUFza0hZ7Rhpnmn9dH2ttF8SUGu0nLCXK-0aPjS8wrcqpFYli1KP1Xd9z5i479JU2nlFGoApZSj8nOsnipIuNaQrSHP9yqb5TQP5eWmQJR_e6M_qZ4WBCwD-_i32AOsKkBnbOM7YeD3AmHNXXgQVKmimCCpCYUTZnoc7ojSxpl_LXUuDrDyyNthGuvml4qdny3aiZoduxp0iI2hspdSl57w3H_21BhjjxH6e52OuG2N3O9bUnN61O_mCPtWRRaloHOK_V3d_h8j26S3GbNT_95kUYbnCtiHk_0WJ8rWzCAouYjUgyPsb7XDSXmE7mqsRBiDR9QkDZ68we2CwPvOuCz0dSQWl_c2nS0Gs9vX0w_GwDt6hHZOKgca1TOS9c0sjLCSh7JI4uGYRkEVG2jQiVpz0hlB-9iNyGcbuVhK63RK3BHDcwNZ4R6Ohu6pr7GAvZ-_SdAO2l&amp;isLearningSubscriber=false&amp;trk=profileNonSelf_d_flagship3_profile_view_base_learningFeedm015_2809587_learning" id="ember341" class="ember-view">
+      <div id="ember342" class="t-14 t-black t-bold lt-line-clamp lt-line-clamp--multi-line ember-view" style="-webkit-line-clamp: 2">  Learning SAP SD (Sales and Distribution)
+
+<!----></div>
+    </a>
+    <div class="display-flex align-items-center justify-space-between mt4 t-12 t-black--light">
+      
+              <span>
+    11,904 viewers
+  </span>
+
+          
+    </div>
+  </div>
+</li>
+
+          <li class="learning-recommendation-item display-flex">
+  <a tabindex="0" target="_blank" href="https://www.linkedin.com/learning/designing-growth-strategies?courseClaim=AQGr6V2eqpbPVwAAAXckkuaSaVSXV_IurcOsvnNaF7nuI2LjH4p8ZMePyP9EXAymlqqaq6Thf7CsX-l6EO_eHDKWftC2ob6qF6LXW4SgKTcDjwo172boeMmkWtvKwA_bQutsuxapMyY3TQOkG-5Z4JhUqmL_zMKlO6Gd8YfjYSJYTVaA2Je4y1iA7v9AAlvrDC9LAkXZ0-FpFaanwWsDgCGme3dmcnIPmL9EMZ8wXqFUmtbruEjpUW5YZhunuC-DYNSH7lnkQ3Zb3QwaniBZt5OsO8KJ7D6FOkf8zh5-U-_NrYoZFJ1vObWlQY47E62dWUZrPv5bwTZ9UXT8QxH45OdsLCG6lIaDL4JDfas18Khx7G1C2xocgSO8YAlvXPVKNNjGSqxPPGbZfAslZVF36YdPyaA5kSTe73bC4Zrz3XdUGHPl3YwQ_ASGoHKD93s-nRN11FW50BuEE6oaCYHXAVZfXREOwMEr5WHJLrJSCtR7Tazn4j2y2mSg3N7X2cjd26BAl2LK9DGWHI7Vq3NAsXRmEDrezqbUwSO33tN6vus8f2N5zY91WiSbWW1WY7uUDDN4bvw6jhSjqfCBqJVHr-RkEMGhwrbldhxVHSOQ5NfeeHfbPyNFzlEfgX_j_-PdwEjxP9kIHIt_gwVH5Xj_Ck3PqA1CB_27RqFc29R6Rzsvog450qmykHcHNDMOpzWuuQ&amp;isLearningSubscriber=false&amp;trk=profileNonSelf_d_flagship3_profile_view_base_learningFeedm015_373563_learning" id="ember344" class="learning-recommendation-item__thumbnail-container ember-view" aria-hidden="true">
+    <img src="https://media-exp1.licdn.com/dms/image/C4D0DAQHCPkOmnZnQRg/learning-public-crop_60_100/0/1573245344747?e=1611313200&amp;v=beta&amp;t=m1CJmlCXyrJrio70psR953YcgX8g6NIpRD8sRpQ2ggU" loading="lazy" id="ember345" class="learning-recommendation-item__image lazy-image ember-view">
+    <li-icon aria-hidden="true" type="play-icon" class="learning-recommendation-item__play-icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" width="16" height="16" focusable="false">
+  <path d="M15 8a.79.79 0 00-.38-.68L4 .88v14.25l10.62-6.45A.79.79 0 0015 8zM6 4.28L12.13 8 6 11.72V4.28z"></path>
+</svg></li-icon>
+  </a>
+  <div class="ml2 full-width">
+    <a tabindex="0" target="_blank" href="https://www.linkedin.com/learning/designing-growth-strategies?courseClaim=AQGr6V2eqpbPVwAAAXckkuaSaVSXV_IurcOsvnNaF7nuI2LjH4p8ZMePyP9EXAymlqqaq6Thf7CsX-l6EO_eHDKWftC2ob6qF6LXW4SgKTcDjwo172boeMmkWtvKwA_bQutsuxapMyY3TQOkG-5Z4JhUqmL_zMKlO6Gd8YfjYSJYTVaA2Je4y1iA7v9AAlvrDC9LAkXZ0-FpFaanwWsDgCGme3dmcnIPmL9EMZ8wXqFUmtbruEjpUW5YZhunuC-DYNSH7lnkQ3Zb3QwaniBZt5OsO8KJ7D6FOkf8zh5-U-_NrYoZFJ1vObWlQY47E62dWUZrPv5bwTZ9UXT8QxH45OdsLCG6lIaDL4JDfas18Khx7G1C2xocgSO8YAlvXPVKNNjGSqxPPGbZfAslZVF36YdPyaA5kSTe73bC4Zrz3XdUGHPl3YwQ_ASGoHKD93s-nRN11FW50BuEE6oaCYHXAVZfXREOwMEr5WHJLrJSCtR7Tazn4j2y2mSg3N7X2cjd26BAl2LK9DGWHI7Vq3NAsXRmEDrezqbUwSO33tN6vus8f2N5zY91WiSbWW1WY7uUDDN4bvw6jhSjqfCBqJVHr-RkEMGhwrbldhxVHSOQ5NfeeHfbPyNFzlEfgX_j_-PdwEjxP9kIHIt_gwVH5Xj_Ck3PqA1CB_27RqFc29R6Rzsvog450qmykHcHNDMOpzWuuQ&amp;isLearningSubscriber=false&amp;trk=profileNonSelf_d_flagship3_profile_view_base_learningFeedm015_373563_learning" id="ember346" class="ember-view">
+      <div id="ember347" class="t-14 t-black t-bold lt-line-clamp lt-line-clamp--multi-line ember-view" style="-webkit-line-clamp: 2">  Designing Growth Strategies
+
+<!----></div>
+    </a>
+    <div class="display-flex align-items-center justify-space-between mt4 t-12 t-black--light">
+      
+              <span>
+    19,584 viewers
+  </span>
+
+          
+    </div>
+  </div>
+</li>
+
+      </ul>
+    
+  
+</div>
+
+  <span class="pv-course-recommendations__cta">
+    <a tabindex="0" target="_blank" href="https://www.linkedin.com/learning/?trk=profileNonSelf_d_flagship3_profile_view_base_learningFeedm015_viewMoreCourses_learning" id="ember348" class="ember-view pv-course-recommendations__cta-link artdeco-button artdeco-button--tertiary t-14 pv3 full-width artdeco-button--muted">
+        Show more on LinkedIn Learning
+     </a>
+  </span>
+</section>
+
+
+</div>            <div id="ember99" class="sticky ember-view" style="height: 262px; width: 312px; margin: 0px auto;">            <div class="pv-ad-banner">
+              <div id="ember100" class="ember-view"><section id="ember101" class="ad-banner-container ember-view"><iframe class="ad-banner" width="300" height="250" src="about:blank" scrolling="no" title="advertisement"></iframe>
+
+<!---->
+<!---->
+<!----></section></div>
+            </div>
+
+</div>      </div>
+
+      <footer id="ember102" class="global-footer global-footer--static ember-view"><div id="ember103" class="global-footer__occlusion-hint ember-view"><!----></div></footer>
+    </div>"""

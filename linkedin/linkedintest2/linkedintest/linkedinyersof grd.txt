@@ -1,0 +1,12 @@
+from bs4 import BeautifulSoup
+soup = BeautifulSoup('<span id="count_text">9,413 members</span>',   'html.parser')
+soup.span<span id="count_text">9,413 members</span> 
+soup.span.text
+
+html1="<span><time>2016</time> – <time>2020</time></span>"
+html_soup=BeautifulSoup(html1,'html.parser')
+times=html_soup.find("time")
+type(times)
+print(times.text)   
+times2=times.find_next_sibling("time")
+print(times2.text) 

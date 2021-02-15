@@ -1,0 +1,53 @@
+n_num = [9.2, 10.7, 6.8, 9, 3.4,5.7,5.7]
+n=len(n_num)
+get_sum =sum(n_num)
+mean = get_sum/n
+
+n_num =[9.2, 10.7, 6.8, 9, 3.4,5.7,5.7]
+n=len(n_num)
+n_num.sort()
+if n% 2 ==0:
+median1 = n_num[n//2]
+median1 = n_num[n//2-1]
+median =(median1+median2)/2
+else
+median = n_num[n//2]
+
+n_num = [9.2, 10.7, 6.8, 9, 3.4,5.7,5.7]
+n = len(n_num)
+data = Counter(n_num)
+get_mode = dict(data)
+mode = [k for k, v in get_mode.items() if v ==max(list(data.values()))]
+if len(mode) == n
+get_mode = "No mode found"
+else
+get_mode ="mode is /are:"+','.join(map(str,mode))
+print(get_mode)
+
+print("mean: "+str(mean))
+print("median: " +str(median))
+print("mode" +get_mode)
+
+
+
+import numpy as np
+from scipy import stats
+
+
+# X is a Python List
+X = [9.2, 10.7, 6.8, 9, 3.4,5.7,5.7]
+
+# Sorting the data and printing it.
+X.sort()
+print(X)
+
+mean = np.mean(X)
+median = np.median(X)
+sd = np.std(X)
+variance = np.var(X)
+mode = stats.mode()
+print("Mean", mean) # 38.91625
+print("Median", median) # 43.405
+print("Standard Deviation", sd) # 14.3815654029
+print("Variance", variance) # 206.829423437
+print("Mode",mode)

@@ -1,0 +1,13 @@
+import os
+entries = os.scandir('E:\Shirso)
+for entry in entries.iterdir():
+    print(entry.name)
+	
+	
+myfile = open(E:\Shirso)
+
+
+import pandas as pd 
+
+data = pd.read_json('http://api.population.io/1.0/population/India/today-and-tomorrow/?format = json') 
+print(data) 
