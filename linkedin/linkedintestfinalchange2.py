@@ -205,7 +205,7 @@ while(page <2
     page = page + 1
 # for i in profileIds:
 #         print(i)        
-print('here')
+print('done')
 print (len(Recdict))
 
 for x, y in Recdict.items():
