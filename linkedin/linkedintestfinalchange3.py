@@ -77,6 +77,9 @@ def clean_string(var):
 def visitProfile(link):
     browser.get(link)
     print('Enterd  visited profile')
+    Defaults1 = {'Name':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': ''}
+    ids1 = []
+    Recdict = dict.fromkeys(ids1, Defaults1)
     html_soup = BeautifulSoup(browser.page_source,'html.parser')
     print(link)
     try:
@@ -118,8 +121,8 @@ def visitProfile(link):
                                                 'dates_employed': clean_string(k.find("h4",{"class":"pv-entity__date-range t-14 t-black--light t-normal"}).find("span",{"class":""}).text) if k.find("h4",{"class":"pv-entity__date-range t-14 t-black--light t-normal"}) else ''
                                                 }
                             # i=i+1                  
-                # for x, y in expdict.items():
-                #     print(x,y)                
+                for x, y in expdict.items():
+                    print(x,y)                
                 else :
                     thisdict=''
 
