@@ -264,12 +264,18 @@ for x,y in new_rectdict.items():
 
 #    z=mycol.insert_one(y)
 # %% 
-print(z)
+# print(z)
 myquery = {"Name": "ARJUN MURMU" }  
 a = mycol.find(myquery)   
 for q in a:
+  print(q) 
+# %%     
+print(z)
+myquery = {"Edu.College": "Jadavpur University"}
+#   
+a = mycol.find(myquery)   
+for q in a:
   print(q)    
-
 # %%   
 collections = db.getCollectionNames();
 for(var i = 0; i< collections.length; i++) {    
