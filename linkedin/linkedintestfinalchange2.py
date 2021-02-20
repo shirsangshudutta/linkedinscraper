@@ -157,8 +157,7 @@ Defaults1 = {'Name': '', 'Edu': '', 'Exp': ''}
 Recdict = dict.fromkeys(ids1, Defaults1)
 baselink = browser.current_url.partition('page')[0]
 print('@@@@@@@@@@@@@baselink@@@@@@@@@@@@@@@@@@',baselink)
-while(page <2
-):
+while(page <2):
     # page = page + 1
     next_page = ''
     next_page = ('&page='+str(page))
@@ -191,12 +190,13 @@ while(page <2
                     if urlmatch.urlmatch(match_pattern,linkprofile):
                         print('linkprofile'+linkprofile)
                     # profileIds=getNewProfileIDs(BeautifulSoup(browser.page_source), profilesQueued)
+                        index=index+1
                         Recdict[index]=visitProfile(Recdict,linkprofile)
                         visitedProfiles=linkprofile
             if index is limit:
                 print('####limit has reached')
                 break
-            index=index+1
+            # index=index+1
         #     if f is not None:
         #         print('linkprofile'+linkprofile)
         # # profileIds=getNewProfileIDs(BeautifulSoup(browser.page_source), profilesQueued)

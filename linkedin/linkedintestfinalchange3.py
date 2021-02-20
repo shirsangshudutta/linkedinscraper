@@ -79,7 +79,7 @@ def visitProfile(link):
     print('Enterd  visited profile')
     Defaults1 = {'Name':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': ''}
     ids1 = []
-    Recdict = dict.fromkeys(ids1, Defaults1)
+    thisdict = dict.fromkeys(ids1, Defaults1)
     html_soup = BeautifulSoup(browser.page_source,'html.parser')
     print(link)
     try:
@@ -93,7 +93,7 @@ def visitProfile(link):
                         IDs = []
                         Defaults = {'Name':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': ''}
                         thisdict = dict.fromkeys(IDs, Defaults)
-                        thisdict={'Name':name.text}
+                        thisdict={'Name': name.text}
                         if (html_soup.find("section", {"id":"education-section"})):
                             edusect=html_soup.find("section", {"class":"pv-profile-section education-section ember-view"})
                             print()
@@ -121,21 +121,21 @@ def visitProfile(link):
                                                 'dates_employed': clean_string(k.find("h4",{"class":"pv-entity__date-range t-14 t-black--light t-normal"}).find("span",{"class":""}).text) if k.find("h4",{"class":"pv-entity__date-range t-14 t-black--light t-normal"}) else ''
                                                 }
                             # i=i+1                  
-                for x, y in expdict.items():
-                    print(x,y)                
+                # for x, y in thisdict.items():
+                #     print(x,y)  
+                # return thisdict                  
                 else :
                     thisdict=''
 
                     # 'Edu':thisdict,
 
         else :
-             thisdict=''
-        
-    
-           
+                thisdict=''
+                
+        # for x, y in thisdict.items():
+        #             print(x,y)
     except :
-        print('Except')
-        thisdict=''
+         thisdict=''
     return thisdict    
 #%%
 visitingProfileID = '/in/shirsa-dutta-8301241a3/'
@@ -152,6 +152,7 @@ que.send_keys(Keys.ENTER)
 # que.send_keys("jadavpur university department of information technology")
 # que.send_keys(Keys.ENTER)
 profilesQueued = []
+
 profilesID = []
 page = 1
 index = 0
@@ -166,6 +167,7 @@ baselink = browser.current_url.partition('page')[0]
 print('@@@@@@@@@@@@@baselink@@@@@@@@@@@@@@@@@@',baselink)
 while(page <2
 ):
+
     # page = page + 1
     next_page = ''
     next_page = ('&page='+str(page))
@@ -198,12 +200,12 @@ while(page <2
                     if urlmatch.urlmatch(match_pattern,linkprofile):
                         print('linkprofile'+linkprofile)
                     # profileIds=getNewProfileIDs(BeautifulSoup(browser.page_source), profilesQueued)
-                        Recdict[index]=(visitProfile(linkprofile))
+                        Recdict[index]=visitProfile(linkprofile)
                         visitedProfiles=linkprofile
+                        index=index+1
             if index is limit:
                 print('####limit has reached')
                 break
-            index=index+1
         #     if f is not None:
         #         print('linkprofile'+linkprofile)
         # # profileIds=getNewProfileIDs(BeautifulSoup(browser.page_source), profilesQueued)
