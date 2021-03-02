@@ -1,5 +1,5 @@
 {
-    "2": {
+    "1": {
         "Name": "ARJUN MURMU",
         "Exp": {},
         "Edu": {
@@ -7,27 +7,6 @@
             "degree": "Bachelor of Engineering - BE",
             "branch": "Computer Science and Engineering",
             "duration": "2016 \u2013 2020"
-        },
-        "_id": {
-            "$oid": "60282ed043a29a7b8cb5303d"
-        }
-    },
-    "8": {
-        "Name": "Sushan Chakraborty",
-        "Exp": {
-            "designation": "Computer Software",
-            "company": "Cognizant",
-            "employ_duration": "5 yrs 6 mos",
-            "dates_employed": "Sep 2015 \u2013 Present"
-        },
-        "Edu": {
-            "college": "Jadavpur University",
-            "degree": "Master\u2019s Degree",
-            "branch": "Computer Science",
-            "duration": "2012"
-        },
-        "_id": {
-            "$oid": "60283b8e43a29a7b8cb53057"
         }
     }
 }

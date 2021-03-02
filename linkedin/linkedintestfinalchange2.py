@@ -157,7 +157,7 @@ Defaults1 = {'Name': '', 'Edu': '', 'Exp': ''}
 Recdict = dict.fromkeys(ids1, Defaults1)
 baselink = browser.current_url.partition('page')[0]
 print('@@@@@@@@@@@@@baselink@@@@@@@@@@@@@@@@@@',baselink)
-while(page <2):
+while(page <5):
     # page = page + 1
     next_page = ''
     next_page = ('&page='+str(page))
