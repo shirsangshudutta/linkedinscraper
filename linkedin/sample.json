@@ -8,5 +8,55 @@
             "branch": "Computer Science and Engineering",
             "duration": "2016 \u2013 2020"
         }
+    },
+    "4": {
+        "Name": "Ankit Roy",
+        "Exp": {},
+        "Edu": {
+            "college": "Jadavpur University",
+            "degree": "Bachelor of Engineering - BE",
+            "branch": "Computer Science",
+            "duration": "2015 \u2013 2019"
+        }
+    },
+    "7": {
+        "Name": "soumi paul",
+        "Exp": {},
+        "Edu": {
+            "college": "Jadavpur University",
+            "degree": "Doctor of Philosophy (PhD)",
+            "branch": "Computer Science",
+            "duration": "2014 \u2013 2019"
+        }
+    },
+    "9": {
+        "Name": "Anirban Das",
+        "Exp": {
+            "designation": "Student Partner 18",
+            "company": "Internshala        Part-time",
+            "employ_duration": "4 mos",
+            "dates_employed": "May 2020 \u2013 Aug 2020"
+        },
+        "Edu": {
+            "college": "Jadavpur University",
+            "degree": "Bachelor of Engineering - BE",
+            "branch": "Computer Science",
+            "duration": "2019 \u2013 2023"
+        }
+    },
+    "10": {
+        "Name": "Sushan Chakraborty",
+        "Exp": {
+            "designation": "Computer Software",
+            "company": "Cognizant",
+            "employ_duration": "5 yrs 7 mos",
+            "dates_employed": "Sep 2015 \u2013 Present"
+        },
+        "Edu": {
+            "college": "Jadavpur University",
+            "degree": "Master\u2019s Degree",
+            "branch": "Computer Science",
+            "duration": "2012"
+        }
     }
 }

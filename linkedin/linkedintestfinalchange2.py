@@ -210,7 +210,16 @@ print (len(Recdict))
 
 for x, y in Recdict.items():
     print(x, y)    
-   
+#%%
+# for x, y in Recdict.items():
+#     print(x,y) 
+recdict1={k:v for k,v in Recdict.items() if  v}
+for x, y in recdict1.items():
+    print(x,y) 
+res = {key: recdict1[key] for key in recdict1.keys() 
+                               & {'Name'}}     
+print("The filtered dictionary is : " + str(res)) 
+
 #%%
 import bson
 from bson import json_util
