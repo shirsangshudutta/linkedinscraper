@@ -51,7 +51,7 @@ elementID.submit()
 visitingProfileID = '/in/shirsa-dutta-8301241a3/'
 fullLink = 'https://www.linkedin.com' + visitingProfileID
 browser.get(fullLink)
-que = browser.find_element_by_xpath('//*[@id="ember20"]/input')
+que = browser.find_element_by_xpath('//*[@id="ember15"]/input')
 print(que)
 que.send_keys("jadavpur university department of information technology")
 que.send_keys(Keys.ENTER)
@@ -137,7 +137,7 @@ def visitProfile(Recdict, link):
 visitingProfileID = '/in/shirsa-dutta-8301241a3/'
 fullLink = 'https://www.linkedin.com' + visitingProfileID
 browser.get(fullLink)
-que = browser.find_element_by_xpath('//*[@id="ember16"]/input')
+que = browser.find_element_by_xpath('//*[@id="ember15"]/input')
 print(que)
 que.send_keys("jadavpur university computer science")
 que.send_keys(Keys.ENTER)
@@ -157,7 +157,7 @@ Defaults1 = {'Name': '', 'Edu': '', 'Exp': ''}
 Recdict = dict.fromkeys(ids1, Defaults1)
 baselink = browser.current_url.partition('page')[0]
 print('@@@@@@@@@@@@@baselink@@@@@@@@@@@@@@@@@@',baselink)
-while(page <5):
+while(page <3):
     # page = page + 1
     next_page = ''
     next_page = ('&page='+str(page))
@@ -178,12 +178,12 @@ while(page <5):
         if profile is not None:
             linkprofile=""
             visited_set = set()
-            # print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&77')
+            print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&77')
             for b in profile.find_all("span", {"class": "entity-result__title-line flex-shrink-1 entity-result__title-text--black "}):
-                # print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&66')
+                print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&66')
                 f=""
                 for f in b.find_all("a",{"class":"app-aware-link"}) :
-                    # print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&55')
+                    print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&55')
                     # print(f)
                     # if re.match(f['href'] ,"https:\/\/www.linkedin.com\/in\/\*") :
                     linkprofile = f['href']
