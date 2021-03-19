@@ -32,7 +32,11 @@ print(username)
 # path = cdi.install(file_directory='c:\\data\\chromedriver\\', verbose=True, chmod=True, overwrite=False, version=None)
 # print('Installed chromedriver to path: %s' % path)
 # browser = webdriver.Chrome("c:\\data\\chromedriver\\chromedriver.exe")
+# options.add_argument('--ignore-certificate-errors')
+# options.add_argument("--test-type")
+# options.binary_location = "/usr/bin/chromium"
 browser = webdriver.Chrome('E:\\pyhton\\driver\\chromedriver.exe')
+# browser = webdriver.Chrome(chrome_options=options)
 # browser = webdriver.Chrome(executable_path='E:\\python\\driver\\chromedriver.exe')
 
 # from webdriver_manager.chrome import ChromeDriverManager
@@ -51,9 +55,9 @@ elementID.submit()
 visitingProfileID = '/in/shirsa-dutta-8301241a3/'
 fullLink = 'https://www.linkedin.com' + visitingProfileID
 browser.get(fullLink)
-que = browser.find_element_by_xpath('//*[@id="ember15"]/input')
+que = browser.find_element_by_xpath('//*[@id="ember18"]/input')
 print(que)
-que.send_keys("jadavpur university department of information technology")
+que.send_keys("jadavpur university computer science")
 que.send_keys(Keys.ENTER)
 # time.sleep(random.randint(1, 5))
 # link2=browser.current_url
@@ -77,6 +81,8 @@ def clean_string(var):
 def visitProfile(Recdict, link):
     browser.get(link)
     print('Enterd  visited profile')
+    time.sleep(random.randint(1, 5))
+    print('current_url',browser.current_url)
     html_soup = BeautifulSoup(browser.page_source,'html.parser')
     print(link)
     try:
@@ -137,7 +143,7 @@ def visitProfile(Recdict, link):
 visitingProfileID = '/in/shirsa-dutta-8301241a3/'
 fullLink = 'https://www.linkedin.com' + visitingProfileID
 browser.get(fullLink)
-que = browser.find_element_by_xpath('//*[@id="ember15"]/input')
+que = browser.find_element_by_xpath('//*[@id="ember18"]/input')
 print(que)
 que.send_keys("jadavpur university computer science")
 que.send_keys(Keys.ENTER)
@@ -149,7 +155,7 @@ que.send_keys(Keys.ENTER)
 # que.send_keys(Keys.ENTER)
 profilesQueued = []
 profilesID = []
-page = 1
+page = 0
 index = 0
 limit = 10
 ids1 = []
@@ -158,20 +164,23 @@ Recdict = dict.fromkeys(ids1, Defaults1)
 baselink = browser.current_url.partition('page')[0]
 print('@@@@@@@@@@@@@baselink@@@@@@@@@@@@@@@@@@',baselink)
 while(page <3):
-    # page = page + 1
-    next_page = ''
-    next_page = ('&page='+str(page))
-    print('next_page: '+next_page)
-    # print('link:'+link)
-    nextlink = baselink+next_page
-    print('nextlink:'+nextlink)
+    if page==0:
+        nextlink=baselink
+        print('page 0 nextlink:'+nextlink)
+    else:    
+        page = page + 1
+        next_page = ''
+        next_page = ('&page='+str(page))
+        print('next_page: '+next_page)
+        # print('link:'+link)
+        nextlink = baselink+next_page
+        print('nextlink:'+nextlink)
     time.sleep(random.randint(1, 5))
-    try:
-        browser.get(nextlink)
-    except NoSuchElementException:
-        print('in exception')
-        break
+    browser.get(nextlink)
+    time.sleep(random.randint(1, 5))
+    print('current_url',browser.current_url)
     html_source = BeautifulSoup(browser.page_source, 'html.parser')
+    # print(html_source)
     excluded_link="https://www.linkedin.com/search/results/all/headless?keywords=jadavpur%20university%20department%20of%20information%20technology&amp;origin=GLOBAL_SEARCH_HEADER\">"
     match_pattern = 'https://www.linkedin.com/in/*'
     for profile in html_source.find_all("div", {"class": "entity-result__content entity-result__divider pt3 pb3 t-12 t-black--light"}):
@@ -179,7 +188,7 @@ while(page <3):
             linkprofile=""
             visited_set = set()
             print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&77')
-            for b in profile.find_all("span", {"class": "entity-result__title-line flex-shrink-1 entity-result__title-text--black "}):
+            for b in profile.find_all("span", {"class": "entity-result__title-text t-16"}):
                 print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&66')
                 f=""
                 for f in b.find_all("a",{"class":"app-aware-link"}) :
