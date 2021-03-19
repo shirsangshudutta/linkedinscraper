@@ -189,7 +189,7 @@ while(page <2
             linkprofile=""
             visited_set = set()
             # print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&77')
-            for b in profile.find_all("span", {"class": "entity-result__title-line flex-shrink-1 entity-result__title-text--black "}):
+            for b in profile.find_all("span", {"class": "entity-result__title-text t-16"}):
                 # print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&66')
                 f=""
                 for f in b.find_all("a",{"class":"app-aware-link"}) :
