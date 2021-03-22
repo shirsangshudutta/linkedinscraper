@@ -175,7 +175,6 @@ while(page <3):
         # print('link:'+link)
         nextlink = baselink+next_page
         print('nextlink:'+nextlink)
-    time.sleep(random.randint(1, 5))
     browser.get(nextlink)
     time.sleep(random.randint(1, 5))
     print('current_url',browser.current_url)
