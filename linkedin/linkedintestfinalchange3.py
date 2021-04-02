@@ -20,6 +20,9 @@ file = open('E:\config.txt')
 lines = file.readlines()
 username = lines[0]
 password = lines[1]
+branch=lines[2]
+university=lines[3]
+
 print(username)
 
 # from urllib.parse import urlparse
@@ -81,10 +84,38 @@ def visitProfile(link):
     Defaults1 = {'Name':'','Link':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': ''}
     ids1 = []
     thisdict = dict.fromkeys(ids1, Defaults1)
+    browser.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+    time.sleep(random.randint(1,5))
     html_soup = BeautifulSoup(browser.page_source,'html.parser')
-    print(link)
+    print('link',browser.current_url)
+    name = html_soup.find("li", {"class": "inline t-24 t-black t-normal break-words"})
+    print(name.text)
+#     /*SCROLL_PAUSE_TIME=5
+# #Get scroll height
+#     last_height = browser.execute_script("return document.body.scrollHeight")
+#     for i in range(3): 
+#     #Scroll down to bottom
+#         browser.execute_script("window. scrollTo(0, document.body.scrollHeight);")
+#         #Woit to Load page
+#         time.sleep(SCROLL_PAUSE_TIME)
+#         # Calculate new scroll height and compare with Last seroll height
+
+#         new_height=browser.execute_script("return document.body.scrollHeight;")
+
+#         if new_height==last_height:
+
+#             break
+
+#         last_height = new_height
+#         */
+    test1=html_soup.find("h3",{"class":"pv-entity__school-name t-16 t-black t-bold"})
+    print(test1)
+    # element = browser.find_elements_by_css_selector('#ember140 > div.pv-entity__summary-info.pv-entity__summary-info--background-section > div > h3')
+    # browser.execute_script("arguments[0].scrollIntoView();", element)
+    # test=html_soup.find("h3",{"class":"pv-entity__school-name t-16 t-black t-bold"}).find(text=re.compile("Jadavpur University",re.IGNORECASE))
+    # print(test)
     try:
-        if(html_soup.find("h3",{"class":"pv-entity__school-name t-16 t-black t-bold"}).find(text=re.compile("jadavpur university",re.IGNORECASE))) is not None:
+        if(html_soup.find("h3",{"class":"pv-entity__school-name t-16 t-black t-bold"}).find(text=re.compile("Jadavpur University",re.IGNORECASE))) is not None:
                 print("@@@@edu@@@@")
                 if (html_soup.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).find(text=re.compile("Computer Science",re.IGNORECASE))) is not None:
                     print("@@@@infotech@@@@")
@@ -98,11 +129,13 @@ def visitProfile(link):
                         thisdict['Link']= clean_string(link)
                         if (html_soup.find("section", {"id":"education-section"})):
                             edusect=html_soup.find("section", {"class":"pv-profile-section education-section ember-view"})
-                            print()
                             for t in edusect.find_all("li", {"class": "pv-profile-section__list-item pv-education-entity pv-profile-section__card-item ember-view"}):
-                                if(t.find("h3",{"class":"pv-entity__school-name t-16 t-black t-bold"}).find(text=re.compile("jadavpur university",re.IGNORECASE))) :
+                                print('university',university)
+                                print('branch',branch)
+                                if(t.find("h3",{"class":"pv-entity__school-name t-16 t-black t-bold"}).find(text=re.compile("Jadavpur University",re.IGNORECASE))) :
                                     thisdict['college']=t.find("h3",{"class":"pv-entity__school-name t-16 t-black t-bold"}).text if t.find("h3",{"class":"pv-entity__school-name t-16 t-black t-bold"}) else '',
                                     thisdict['degree']=t.find("p",{"class":"pv-entity__secondary-title pv-entity__degree-name t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).text if t.find("p",{"class":"pv-entity__secondary-title pv-entity__degree-name t-14 t-black t-normal"}) else '',
+                                    # thisdict['branch']=clean_string(t.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).text) if t.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).find(text=re.compile("Computer Science",re.IGNORECASE)) else '',
                                     thisdict['branch']=clean_string(t.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).text) if t.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).find(text=re.compile("Computer Science",re.IGNORECASE)) else '',
                                     thisdict['duration']=clean_string(t.find("p",{"class":"pv-entity__dates t-14 t-black--light t-normal"}).find("span",{"class":""}).text) if t.find("p",{"class":"pv-entity__dates t-14 t-black--light t-normal"}).find("span",{"class":""}) else ''
                                                 
@@ -135,9 +168,19 @@ def visitProfile(link):
                 
         for x, y in thisdict.items():
                     print(x,y)
-    except :
+    except Exception as e :
          thisdict=''
-    return thisdict    
+         print('in except',e)
+    return thisdict 
+#%%
+link='https://www.linkedin.com/in/shanawaz-alam-ju/'
+# link='https://www.linkedin.com/in/arjun-murmu-82073b159/'
+
+Recdict=visitProfile(link)
+
+for x, y in Recdict.items():
+    print(x,y)        
+
 #%%
 visitingProfileID = '/in/shirsa-dutta-8301241a3/'
 fullLink = 'https://www.linkedin.com' + visitingProfileID
@@ -157,7 +200,7 @@ profilesQueued = []
 profilesID = []
 page = 0
 index = 0
-limit = 10
+limit = 1
 ids1 = []
 # Defaults1 = {'Name': '', 'Edu': '', 'Exp': ''}
 IDs = []
@@ -196,12 +239,14 @@ while(page <2):
                     # print(f)
                     # if re.match(f['href'] ,"https:\/\/www.linkedin.com\/in\/\*") :
                     linkprofile = f['href']
+                    # linkprofile="https://www.linkedin.com/in/shanawaz-alam-ju/"
                     if urlmatch.urlmatch(match_pattern,linkprofile):
                         print('linkprofile'+linkprofile,index)
                     # profileIds=getNewProfileIDs(BeautifulSoup(browser.page_source), profilesQueued)
                         Recdict[index]=visitProfile(linkprofile)
                         visitedProfiles=linkprofile
-                        index=index+1
+                        if len(Recdict[index])>0:
+                         index=index+1
             if index is limit:
                 print('####limit has reached')
                 break
@@ -217,8 +262,14 @@ print('here')
 print (len(Recdict))
 # print(Recdict)
 for x, y in Recdict.items():
-    print(x, y)    
-   
+    print(x, y)  
+
+
+#%%
+ #print only values having non null
+recdict1={k:v for k,v in Recdict.items() if  v}
+for x, y in recdict1.items():
+    print(x,y)  
 #%%
 import bson
 from bson import json_util
