@@ -50,6 +50,7 @@ def clean_string(var):
 # edusect=BeautifulSoup(html,'html.parser').find("section", {"id":"education-section"})
 # print(edusect)
 i=0
+print('hello world')
 # for t in edusect.find_all("li", {"class": "pv-profile-section__list-item pv-education-entity pv-profile-section__card-item ember-view"}):
 # degree=t.find("p",{"class":"pv-entity__secondary-title pv-entity__degree-name t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).text
 # print(degree)
