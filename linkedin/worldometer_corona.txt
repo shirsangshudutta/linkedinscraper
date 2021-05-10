@@ -1,0 +1,9 @@
+import requests
+	from bs4 import BeautifulSoup
+	import re
+
+	url ='https://www.worldometers.info/coronavirus/country/india/'
+	page=requests.get(url)
+	soup = BeautifulSoup(page.text, 'html.parser')
+	for a  in soup.find_all("div",{"class":"maincounter-number"}):
+	 print(a[1].text)

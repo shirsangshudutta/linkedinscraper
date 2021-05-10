@@ -50,7 +50,7 @@ elementID.submit()
 
 from requests_html import HTMLSession
 url=browser.get
-s=HTMLSession()
+s=HTMLSession('https://www.linkedin.com/in/ankur-manna-57596717a/')
 print(s)
 
 # %%
@@ -74,9 +74,8 @@ def clean_string(var):
     return var
 
 
-def visitProfile():
-    # browser.get(link)
-    time.sleep(random.randint(1,5))
+def visitProfile(link):
+    browser.get(link)
     print('Enterd  visited profile')
     Defaults1 = {'Name':'','Link':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': ''}
     ids1 = []
@@ -84,7 +83,8 @@ def visitProfile():
     print('link',browser.current_url)
     browser.maximize_window()
     # browser.implicitly_wait(20)
-    html_soup = BeautifulSoup(browser.page_source,'html.parser')
+    # height=browser.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+    time.sleep(10)
     # element=html_soup.find_element_by_xpath("//*[@id='ember649']/div[2]")
     # element=html_soup.find("div",{"class":"pv-profile-section-pager ember-view"})
     # # browser.execute_script ("arguments[0].scrollIntoView();",element)
@@ -92,68 +92,56 @@ def visitProfile():
     # browser.execute_script("window.scrollTo(0,2000)")
     # name = html_soup.find("li", {"class": "inline t-24 t-black t-normal break-words"})
     # print(name.text)
-    name = html_soup.find("li", {"class": "inline t-24 t-black t-normal break-words"})
-    if name is not None:
-        print(name.text)
-    IDs = []
-    # Defaults = {'Name':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': ''}
-    # thisdict = dict.fromkeys(IDs, Defaults)
-    thisdict['Name']= clean_string(name.text)
-    thisdict['Link']= clean_string(link)
-    element = browser.find_element_by_class_name("inline t-24 t-black t-normal break-words")
-    browser.execute_script("return arguments[0].scrollIntoView();", element)
-    print(element.is_displayed())
-    # browser.execute_script("window.scrollTo(0,1300)")
-    browser.implicitly_wait(20)
-    # browser.execute_script("window.scrollTo(0,document.body.scrollHeight)")
-    # browser.execute_script("window.scrollTo(0,1200)")
-    # time.sleep(random.randint(1,5))
-    # test=html_soup.find("div",{"class":"pv-profile-section-pager ember-view"})
-    if (html_soup.find("li", {"class":"pv-profile-section__list-item pv-education-entity pv-profile-section__card-item ember-view"})):
-        print('section1')
-        # edusect=html_soup.find("section", {"class":"pv-profile-section education-section ember-view"})
-        try:
-            for t in html_soup.find_all("li", {"class": "pv-profile-section__list-item pv-education-entity pv-profile-section__card-item ember-view"}):
-                print('university',university)
-                print('branch',branch)
-                if(t.find("h3",{"class":"pv-entity__school-name t-16 t-black t-bold"}).find(text=re.compile("Jadavpur University",re.IGNORECASE))) :
-                    print('@@univ')
-                    if (html_soup.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).find(text=re.compile("Computer",re.IGNORECASE))) is not None:
-                        thisdict['college']=t.find("h3",{"class":"pv-entity__school-name t-16 t-black t-bold"}).text if t.find("h3",{"class":"pv-entity__school-name t-16 t-black t-bold"}) else ''
-                        thisdict['degree']=t.find("p",{"class":"pv-entity__secondary-title pv-entity__degree-name t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).text if t.find("p",{"class":"pv-entity__secondary-title pv-entity__degree-name t-14 t-black t-normal"}) else ''
-                        # thisdict['branch']=clean_string(t.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).text) if t.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).find(text=re.compile("Computer Science",re.IGNORECASE)) else '',
-                        thisdict['branch']=clean_string(t.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).text) if t.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).find(text=re.compile("Computer",re.IGNORECASE)) else ''
-                        thisdict['duration']=clean_string(t.find("p",{"class":"pv-entity__dates t-14 t-black--light t-normal"}).find("span",{"class":""}).text) if t.find("p",{"class":"pv-entity__dates t-14 t-black--light t-normal"}).find("span",{"class":""}) else ''
-                                    
-            # for x, y in thisdict.items():
-            #     print(x,y)
-            # IDs = []
-            # Defaults = {}
-            # expdict = dict.fromkeys(IDs, Defaults)
-            i=0
-
-            if (html_soup.find("section", {"class":"pv-profile-section experience-section ember-view"})):
-                print("@@@@here@@@@@")
-                for k in html_soup.find_all("div",{"class":"pv-entity__summary-info pv-entity__summary-info--background-section mb2"},limit=2) :
-                        print("####there@@@@@")
-                        thisdict['designation']= clean_string(k.find("h3",{"class":"t-16 t-black t-bold"}).text) if k.find("h3",{"class":"t-16 t-black t-bold"}) else ''
-                        thisdict['company']=clean_string(k.find("p",{"class":"pv-entity__secondary-title t-14 t-black t-normal"}).text) if k.find("p",{"class":"pv-entity__secondary-title t-14 t-black t-normal"}) else ''
-                        thisdict['employ_duration'] =clean_string(k.find("span",{"class":"pv-entity__bullet-item-v2"}).text) if k.find("span",{"class":"pv-entity__bullet-item-v2"}) else ''
-                        thisdict['dates_employed'] =clean_string(k.find("h4",{"class":"pv-entity__date-range t-14 t-black--light t-normal"}).find("span",{"class":""}).text) if k.find("h4",{"class":"pv-entity__date-range t-14 t-black--light t-normal"}) else ''
-                                        # i=i+1                  
+    for i in range(3):
+        # WebDriverWait waitForElement = new WebDriverWait(browser, 15)
+        # WebElement element = browser.findElement(By.id("education-section"))
+        # # element.click();
+        # wait.until(ExpectedConditions.visibilityOf(element))
+        html_soup = BeautifulSoup(browser.page_source,'html.parser')
+        name = html_soup.find("li", {"class": "inline t-24 t-black t-normal break-words"})
+        if name is not None:
+            print(name.text)
+        IDs = []
+        thisdict['Name']= clean_string(name.text)
+        thisdict['Link']= clean_string(link)
+        element = browser.find_element_by_class_name("inline t-24 t-black t-normal break-words")
+        browser.execute_script("return arguments[0].scrollIntoView();", element)
+        print('is_displayed',element.is_displayed())
+        browser.execute_script("window.scrollTo(0,500)")
+        if (html_soup.find("li", {"class":"pv-profile-section__list-item pv-education-entity pv-profile-section__card-item ember-view"})):
+            print('section1')
+            # edusect=html_soup.find("section", {"class":"pv-profile-section education-section ember-view"})
+            try:
+                for t in html_soup.find_all("li", {"class": "pv-profile-section__list-item pv-education-entity pv-profile-section__card-item ember-view"}):
+                    print('university',university)
+                    print('branch',branch)
+                    if(t.find("h3",{"class":"pv-entity__school-name t-16 t-black t-bold"}).find(text=re.compile("Jadavpur University",re.IGNORECASE))) :
+                        print('@@univ')
+                        if (html_soup.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).find(text=re.compile("Computer",re.IGNORECASE))) is not None:
+                            thisdict['college']=t.find("h3",{"class":"pv-entity__school-name t-16 t-black t-bold"}).text if t.find("h3",{"class":"pv-entity__school-name t-16 t-black t-bold"}) else ''
+                            thisdict['degree']=t.find("p",{"class":"pv-entity__secondary-title pv-entity__degree-name t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).text if t.find("p",{"class":"pv-entity__secondary-title pv-entity__degree-name t-14 t-black t-normal"}) else ''
+                            # thisdict['branch']=clean_string(t.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).text) if t.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).find(text=re.compile("Computer Science",re.IGNORECASE)) else '',
+                            thisdict['branch']=clean_string(t.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).text) if t.find("p",{"class":"pv-entity__secondary-title pv-entity__fos t-14 t-black t-normal"}).find("span",{"class":"pv-entity__comma-item"}).find(text=re.compile("Computer",re.IGNORECASE)) else ''
+                            thisdict['duration']=clean_string(t.find("p",{"class":"pv-entity__dates t-14 t-black--light t-normal"}).find("span",{"class":""}).text) if t.find("p",{"class":"pv-entity__dates t-14 t-black--light t-normal"}).find("span",{"class":""}) else ''
+                                        
                 # for x, y in thisdict.items():
-                #     print(x,y)  
-                # return thisdict                  
-        #         else :
-        #             thisdict=''
+                #     print(x,y)
+                # IDs = []
+                # Defaults = {}
+                # expdict = dict.fromkeys(IDs, Defaults)
+                i=0
 
-        #             # 'Edu':thisdict,
-
-        # else :
-        #         thisdict=''
-        except  :     
-            print("Oops!", sys.exc_info()[0], "occurred.")  
-            pass                     
+                if (html_soup.find("section", {"class":"pv-profile-section experience-section ember-view"})):
+                    print("@@@@here@@@@@")
+                    for k in html_soup.find_all("div",{"class":"pv-entity__summary-info pv-entity__summary-info--background-section mb2"},limit=2) :
+                            print("####there@@@@@")
+                            thisdict['designation']= clean_string(k.find("h3",{"class":"t-16 t-black t-bold"}).text) if k.find("h3",{"class":"t-16 t-black t-bold"}) else ''
+                            thisdict['company']=clean_string(k.find("p",{"class":"pv-entity__secondary-title t-14 t-black t-normal"}).text) if k.find("p",{"class":"pv-entity__secondary-title t-14 t-black t-normal"}) else ''
+                            thisdict['employ_duration'] =clean_string(k.find("span",{"class":"pv-entity__bullet-item-v2"}).text) if k.find("span",{"class":"pv-entity__bullet-item-v2"}) else ''
+                            thisdict['dates_employed'] =clean_string(k.find("h4",{"class":"pv-entity__date-range t-14 t-black--light t-normal"}).find("span",{"class":""}).text) if k.find("h4",{"class":"pv-entity__date-range t-14 t-black--light t-normal"}) else ''
+            except  :     
+                print("Oops!", sys.exc_info()[0], "occurred.")  
+                pass                     
     for x, y in thisdict.items():
                     print(x,y)
     return thisdict 
@@ -165,10 +153,10 @@ def visitProfile():
 # link='https://www.linkedin.com/in/chandreyee-chowdhury-56244263/'
 # link='https://www.linkedin.com/in/arjun-murmu-82073b159/'
 # link='https://www.linkedin.com/in/anjali-c-806186158/'
-link='https://www.linkedin.com/in/ankur-manna-57596717a/'
-
+link='https://www.linkedin.com/in/ankit-fitkariwala-22913017/'
+Recdict=[]
 browser.get(link)
-Recdict=visitProfile()
+Recdict=visitProfile(link)
 if  Recdict is not None:
     for x, y in Recdict.items():
         print(x,y)    

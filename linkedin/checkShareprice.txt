@@ -1,0 +1,7 @@
+import requests
+from bs4 import BeautifulSoup
+import re
+
+url ='https://www.nseindia.com/get-quotes/equity?symbol=ASTRAZEN'
+page=requests.get(url)
+soup = BeautifulSoup(page.text, 'html.parser')
