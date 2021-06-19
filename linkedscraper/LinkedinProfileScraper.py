@@ -51,7 +51,7 @@ elementID.send_keys(password)
 
 elementID.submit()
 
-# %%
+#%% 
 from selenium.webdriver.common.action_chains import ActionChains
 
 visitedProfiles = []
@@ -70,20 +70,22 @@ def visitProfile(link):
     browser.get(link)
     time.sleep(random.randint(1,5))
     print('Enterd  visited profile')
-    Defaults1 = {'Name':'','Link':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': ''}
+    Defaults1 = {'Name':'','Current_location':'','Link':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': ''}
     ids1 = []
     thisdict = dict.fromkeys(ids1, Defaults1)
     html_soup = BeautifulSoup(browser.page_source,'html.parser')
     print('link',browser.current_url)
     # browser.execute_script("window.scrollTo(0,document.body.scrollHeight)")
    
-    name = html_soup.find("li", {"class": "inline t-24 t-black t-normal break-words"})
+    name = html_soup.find("h1", {"class": "text-heading-xlarge inline t-24 v-align-middle break-words"})
     if name is not None:
         print(name.text)
     IDs = []
     thisdict['Name']= clean_string(name.text)
+    thisdict['Current_location']=clean_string(html_soup.find("span",{"class":"text-body-small inline t-black--light break-words"}).text)
     # browser.execute_script("window.scrollTo(0,document.body.scrollHeight)")
     time.sleep(random.randint(1,5))
+
     if (html_soup.find("li", {"class":"pv-profile-section__list-item pv-education-entity pv-profile-section__card-item ember-view"})):
         print('section1')
         # edusect=html_soup.find("section", {"class":"pv-profile-section education-section ember-view"})
@@ -137,8 +139,6 @@ def visitProfile(link):
 #%% search for any university any departmen
 fullLink="https://www.linkedin.com/search/results/all/?keywords=jadavpur%20university%20computer%20science&origin=GLOBAL_SEARCH_HEADER"
 browser.get(fullLink)
-
- # %%
 profilesQueued = []
 profilesID = []
 page = 0
@@ -147,12 +147,13 @@ limit = 100
 ids1 = []
 # Defaults1 = {'Name': '', 'Edu': '', 'Exp': ''}
 IDs = []
-Defaults1 = {'Name':'','Link':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': ''}
+Defaults1 = {'Name':'','Current_location':'','Link':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': ''}
 Recdict = []
 Recdict = dict.fromkeys(ids1, Defaults1)
 baselink = browser.current_url.partition('page')[0]
 print('@@@@@@@@@@@@@baselink@@@@@@@@@@@@@@@@@@',baselink)
-while(page <50):
+start_time=time.time()
+while(page <5):
     if page==0:
         nextlink=baselink
         print('page 0 nextlink:'+nextlink)
@@ -197,6 +198,8 @@ while(page <50):
 # for i in profileIds:
 #         print(i)        
 print('here')
+end_time=time.time()
+print ('total time spent scraping ',index,'profiles is',end_time-start_time)
 print (len(Recdict))
 # print(Recdict)
 for x, y in Recdict.items():
@@ -209,6 +212,61 @@ print(values_list,type(values_list))
 #%%
 df=pd.json_normalize(values_list)
 df.to_csv("emp_list_ju_cse.csv")
+#%%
+df
+#%%
+
+###############Vizualizaions###
+
+dfgrp=df.groupby(['duration']).size().to_frame('count')
+type(dfgrp)
+dfgrp['count'].plot.bar(x='duration', y='size', rot=0)
+# dfgrpcmp=df.groupby(['company']).size().to_frame('count')
+# dfgrpcmp
+# dfgrpcmp['count'].plot.bar(x='company', y='size', rot=0)
+
+#sort by no
+# x = df.groupby('start_station_name')['duration'].mean().sort_values().tail(15)
+#%%
+
+dfgrp=df.groupby(['current_location']).size().to_frame('count')
+type(dfgrp)
+dfgrp['count'].plot.bar(x='duration', y='size', rot=0)
+#%%
+x = df.groupby('company').size().to_frame()
+type(x)
+ax = x.plot(kind='barh', figsize=(8, 10), color='#86bf91', zorder=2, width=0.85)
+
+  # Despine
+# ax.spines['right'].set_visible(False)
+# ax.spines['top'].set_visible(False)
+# ax.spines['left'].set_visible(False)
+# ax.spines['bottom'].set_visible(False)
+
+# # Switch off ticks
+# ax.tick_params(axis="both", which="both", bottom="off", top="off", labelbottom="on", left="off", right="off", labelleft="on")
+
+# # Draw vertical axis lines
+# vals = ax.get_xticks()
+# for tick in vals:
+#     ax.axvline(x=tick, linestyle='dashed', alpha=0.4, color='#eeeeee', zorder=1)
+
+# Set x-axis label
+ax.set_xlabel("Number ", labelpad=20, weight='bold', size=12)
+
+# Set y-axis label
+ax.set_ylabel("Company", labelpad=20, weight='bold', size=12)
+
+# Format y-axis label
+# ax.xaxis.set_major_formatter(StrMethodFormatter('{x:,g}'))
+#%%
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud, STOPWORDS
+text = df['designation'].values 
+wordcloud = WordCloud().generate(str(text))
+plt.imshow(wordcloud)
+plt.axis("off")
+plt.show()
 
 #%%insert into Mongod
 import pymongo
