@@ -47,12 +47,14 @@ elementID = browser.find_element_by_id('username')
 elementID.send_keys(username)
 time.sleep(random.randint(1, 3))
 elementID = browser.find_element_by_id('password')
+time.sleep(random.randint(1, 3))
 elementID.send_keys(password)
 
 elementID.submit()
 
-# %%
+#%% 
 from selenium.webdriver.common.action_chains import ActionChains
+from datetime import datetime
 
 visitedProfiles = []
 profilesQueued = []
@@ -68,22 +70,25 @@ def clean_string(var):
 
 def visitProfile(link):
     browser.get(link)
-    time.sleep(random.randint(1,5))
     print('Enterd  visited profile')
-    Defaults1 = {'Name':'','Link':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': ''}
+    Defaults1 = {'Name':'','Current_location':'','Link':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': 'updated_on',''}
     ids1 = []
     thisdict = dict.fromkeys(ids1, Defaults1)
+    total_height = int(browser.execute_script("return document.body.scrollHeight"))
+    for i in range(1, total_height, 50):
+     browser.execute_script("window.scrollTo(0, {});".format(i))
     html_soup = BeautifulSoup(browser.page_source,'html.parser')
-    print('link',browser.current_url)
-    # browser.execute_script("window.scrollTo(0,document.body.scrollHeight)")
-   
-    name = html_soup.find("li", {"class": "inline t-24 t-black t-normal break-words"})
+    name = html_soup.find("h1", {"class": "text-heading-xlarge inline t-24 v-align-middle break-words"})
     if name is not None:
         print(name.text)
     IDs = []
     thisdict['Name']= clean_string(name.text)
+    thisdict['link']= clean_string(link)
+    thisdict['Current_location']=clean_string(html_soup.find("span",{"class":"text-body-small inline t-black--light break-words"}).text)
     # browser.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+    thisdict['updated_on']=datetime.now()
     time.sleep(random.randint(1,5))
+
     if (html_soup.find("li", {"class":"pv-profile-section__list-item pv-education-entity pv-profile-section__card-item ember-view"})):
         print('section1')
         # edusect=html_soup.find("section", {"class":"pv-profile-section education-section ember-view"})
@@ -133,26 +138,39 @@ def visitProfile(link):
     for x, y in thisdict.items():
                     print(x,y)
     return thisdict 
+#%%
+from pathlib import Path
 
-#%% search for any university any departmen
+def Diff(li1, li2):
+    li_dif = [i for i in li1 + li2 if i not in li1 or i not in li2]
+    return li_dif
+ 
 fullLink="https://www.linkedin.com/search/results/all/?keywords=jadavpur%20university%20computer%20science&origin=GLOBAL_SEARCH_HEADER"
 browser.get(fullLink)
-
- # %%
 profilesQueued = []
 profilesID = []
+visitedProfiles=[]
 page = 0
 index = 0
 limit = 100
 ids1 = []
+frontier=[]
 # Defaults1 = {'Name': '', 'Edu': '', 'Exp': ''}
 IDs = []
-Defaults1 = {'Name':'','Link':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': ''}
+Defaults1 = {'Name':'','Current_location':'','Link':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': ''}
 Recdict = []
 Recdict = dict.fromkeys(ids1, Defaults1)
 baselink = browser.current_url.partition('page')[0]
 print('@@@@@@@@@@@@@baselink@@@@@@@@@@@@@@@@@@',baselink)
-while(page <50):
+start_time=time.time()
+
+filename = Path('visitedProfiles.txt')
+
+filename.touch(exist_ok=True)
+with open('visitedProfiles.txt', 'r') as filehandle:
+    visitedProfiles = [current_link.rstrip() for current_link in filehandle.readlines()]
+print('length  at start @@visitedProfiles',len(visitedProfiles))
+while(page <5):
     if page==0:
         nextlink=baselink
         print('page 0 nextlink:'+nextlink)
@@ -186,21 +204,74 @@ while(page <50):
                     if urlmatch.urlmatch(match_pattern,linkprofile):
                         print('linkprofile'+linkprofile,index)
                     # profileIds=getNewProfileIDs(BeautifulSoup(browser.page_source), profilesQueued)
-                        Recdict[index]=visitProfile(linkprofile)
-                        visitedProfiles=linkprofile
-                        if len(Recdict[index])>0:
-                         index=index+1
+                        # Recdict[index]=visitProfile(linkprofile)
+                        if (len(visitedProfiles)<1):
+                            visitedProfiles.append(linkprofile)
+                        else:
+                            if (linkprofile  not in visitedProfiles):
+                                visitedProfiles.append(linkprofile)
+                                frontier.append(linkprofile)
+                        # if len(Recdict[index])>0:
+                        index=index+1
             if index is limit:
                 print('####limit has reached')
                 break
     page = page + 1
+    time.sleep(random.randint(1,5))
 # for i in profileIds:
 #         print(i)        
 print('here')
-print (len(Recdict))
-# print(Recdict)
-for x, y in Recdict.items():
-    print(x, y)  
+end_time=time.time()
+print ('total time spent scraping ',index,'profiles is',end_time-start_time)
+print ('@@length of frontier ',len(frontier))
+print ('@@length of visitedProfiles now ',len(visitedProfiles))
+
+if (len(visitedProfiles)>0):
+    with open('visitedProfiles.txt', 'a') as filehandle:
+        filehandle.writelines("%s\n" % link for link in frontier)
+# frontier=[]
+# frontier=Diff(visitedProfiles,places_old)
+# print(frontier)
+# print (len(Recdict))
+# # print(Recdict)
+# for x, y in Recdict.items():
+#     print(x, y) 
+#%%
+frontier
+print(len(frontier))
+
+#%%
+index=0
+# list(visitedProfiles)
+start_time=time.time()
+# visitedProfiles1 = visitedProfiles[:6]
+if len(frontier)>0:
+# for i in visitedProfiles:
+#      Recdict[index]=visitProfile(i)
+#      time.sleep(random.randint(1,5))
+#      index=index+1
+    for i in frontier:
+        Recdict[index]=visitProfile(i)
+        time.sleep(random.randint(1,5))
+        index=index+1
+visitedProfiles=visitedProfiles+frontier
+with open('visitedProfiles.txt', 'w') as filehandle:
+    filehandle.writelines("%s\n" % link for link in visitedProfiles)             
+if  Recdict is not None:
+    for x, y in Recdict.items():
+        print(x,y)
+end_time=time.time()        
+print ('total time spent scraping ',index,'profiles is',end_time-start_time)
+
+#%%    
+link='https://www.linkedin.com/in/shirsangshu-dutta-57a3ab13/'
+Recdict=[]
+# browser.get(link)
+# download_urls(link)
+Recdict=visitProfile(link)
+if  Recdict is not None:
+    for x, y in Recdict.items():
+        print(x,y)         
 #%%Convert to  list 
 import pandas as pd
 values=Recdict.values()
@@ -208,9 +279,73 @@ values_list = list(values)
 print(values_list,type(values_list))
 #%%
 df=pd.json_normalize(values_list)
-df.to_csv("emp_list_ju_cse.csv")
+df.to_csv("emp_list_ju_cse_2606.csv")
+#%%
+df
+#%%
 
-#%%insert into Mongod
+###############Vizualizaions###
+
+dfgrp=df.groupby(['duration']).size().to_frame('count')
+type(dfgrp)
+dfgrp['count'].plot.bar(x='duration', y='size', rot=0)
+dfgrpcmp=df.groupby(['company']).size().to_frame('count')
+dfgrpcmp
+# dfgrpcmp['count'].plot.bar(x='company', y='size', rot=0)
+
+#sort by no
+# x = df.groupby('start_station_name')['duration'].mean().sort_values().tail(15)
+
+# pd.merge(df,dfgrp,on=['duration','B','C'])
+# dfgrp.hist(column ='size')
+# ax = dfgrp.plot.bar(x='duration', y='size', rot=0)
+#%%
+x = df.groupby('company').size().to_frame()
+type(x)
+ax = x.plot(kind='barh', figsize=(8, 10), color='#86bf91', zorder=2, width=0.85)
+
+  # Despine
+# ax.spines['right'].set_visible(False)
+# ax.spines['top'].set_visible(False)
+# ax.spines['left'].set_visible(False)
+# ax.spines['bottom'].set_visible(False)
+
+# # Switch off ticks
+# ax.tick_params(axis="both", which="both", bottom="off", top="off", labelbottom="on", left="off", right="off", labelleft="on")
+
+# # Draw vertical axis lines
+# vals = ax.get_xticks()
+# for tick in vals:
+#     ax.axvline(x=tick, linestyle='dashed', alpha=0.4, color='#eeeeee', zorder=1)
+
+# Set x-axis label
+ax.set_xlabel("Number ", labelpad=20, weight='bold', size=12)
+
+# Set y-axis label
+ax.set_ylabel("Company", labelpad=20, weight='bold', size=12)
+
+plt.savefig('foo.png')
+
+# Format y-axis label
+# ax.xaxis.set_major_formatter(StrMethodFormatter('{x:,g}'))
+#%%
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud, STOPWORDS
+text = df['designation'].values 
+wordcloud = WordCloud().generate(str(text))
+plt.imshow(wordcloud)
+plt.axis("off")
+plt.show()
+#%%
+import matplotlib.pyplot as plt
+df1=df['designation'].str.contains('Research|research', regex=True, na=True)
+# df.query('classd.str.contains("research")', engine='python')
+
+df1.value_counts(sort=False).plot( y = 'total_research',kind='pie',autopct='%1.1f%%')
+plt.show()
+
+
+#%%insert into Mongod   
 import pymongo
 import itertools
 import bson
@@ -236,3 +371,36 @@ for x, y in recdict1.items():
     print(x,y) 
 print (len(Recdict))
 # print(Recdict)
+#%%
+import pymysql
+connection = pymysql.connect(host='localhost',
+                             user='root',
+                             password='times82!',
+                             db='linkedin')
+#%%
+
+sql = "INSERT INTO linkedin.pagesvisited (name, College, degree, branch,duration, designation)VALUES (%s, %s, %s, %s, %s, %s)"
+
+
+# Execute the query
+cursor = connection.cursor()
+
+# cursor.execute(sql, ('Ahirangshu','msit','btech','CS','2007-2009','ASE'))
+
+# the connection is not autocommited by default. So we must commit to save our changes.
+connection.commit()                             
+# %%
+import numpy as np
+df1 = df.replace(np.nan, '', regex=True)
+cols = "`,`".join([str(i) for i in df.columns.tolist()])
+df1
+#%%
+# Insert DataFrame recrds one by one.
+cursor = connection.cursor()
+for i,row in df1.iterrows():
+    sql = "INSERT INTO linkedin.pagesvisited (`" +cols + "`) VALUES (" + "%s,"*(len(row)-1) + "%s)"
+    print(sql)
+    cursor.execute(sql, tuple(row))
+    # the connection is not autocommitted by default, so we must commit to save our changes
+    connection.commit()
+# %%
