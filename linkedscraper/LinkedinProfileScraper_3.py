@@ -203,7 +203,7 @@ while(page <10):
 # for x, y in Recdict.items():
 #     print(x, y) 
 #%%
-visitedProfiles1 = visitedProfiles[:3]
+visitedProfiles1 = visitedProfiles[:5]
 index=0
 for i in visitedProfiles:
     print(i)
@@ -215,23 +215,35 @@ end_time=time.time()
 print ('total time spent scraping ',index,'profiles is',end_time-start_time)
 print (len(Recdict))
 #%%
+import concurrent.futures
+import threading
+
 names=[]
 Recdict=[]
-import concurrent.futures
+def clean_string(var):
+    var = str(var)
+    var = var.strip()
+    var = var.replace('\n', '')
+    return var
+def get_session():
+    if not hasattr(thread_local, "session"):
+        thread_local.session = requests.Session()
+    return thread_local.session
 def transform(url):
+    # i=len(url)
     # print('url',url)
     # r = requests.get(str(url))
-    print(url)
+    # for in range(i):
+    # print(url)
     browser.get(url)
     # print(r)
     soup = BeautifulSoup(browser.page_source, 'html.parser')
     # title = soup.find('h1').text
     # titles.append(title)
     # print(title)
-    name = soup.find("h1", {"class": "text-heading-xlarge inline t-24 v-align-middle break-words"})
-    print(name)
-    names.append(name)
-    return
+    name= soup.find("h1", {"class": "text-heading-xlarge inline t-24 v-align-middle break-words"})
+    names.append(clean_string(name.text))
+    return 
 #     return
 # for i in visitedProfiles:
 #     print(i)
@@ -302,9 +314,31 @@ def transform(url):
 #             pass                     
 #     # for x, y in thisdict.items():
 #     #                 print(x,y)
-visitedProfiles1 = visitedProfiles[:3]
+def chunkify(lst,n):
+     return [lst[i::n] for i in range(n)]
+number_of_workers=3
+visitedProfiles1 = visitedProfiles[:6]
+list1 = chunkify(visitedProfiles1,number_of_workers)
+print(list1[0]) 
+print(list1[1])   
 with concurrent.futures.ThreadPoolExecutor() as executor:
-    Recdict=executor.map(transform, visitedProfiles1)
+    Recdict=executor.map(transform, list1[0])
+with concurrent.futures.ThreadPoolExecutor() as executor:
+    Recdict=executor.map(transform, list1[1])    
+# number_of_workers = 2
+
+# with concurrent.futures.ThreadPoolExecutor(max_workers = 5) as executor:
+#    future_to_url = {executor.submit(transform, url): url for url in visitedProfiles1}
+#    for future in concurrent.futures.as_completed(future_to_url):
+#     url = future_to_url[future]
+#    try:
+#       data = future.result()
+      
+#    except Exception as exc:
+#       print('%r generated an exception: %s' % (url, exc))
+#    else:
+#       print('hello')
+    #   print(names)  
 # print(names)
 #%%
 # print(tuple(Recdict))

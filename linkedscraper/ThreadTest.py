@@ -1,5 +1,7 @@
 #%%
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
 from time import sleep
 
 
@@ -14,7 +16,7 @@ for i in inputs:
         break
 
 
-search_bar.send_keys('web scraping with python') 
+search_bar.send_keys('jadavpur university computer science') 
 search_bar.send_keys(Keys.ENTER)
 
 

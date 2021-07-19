@@ -1,4 +1,4 @@
-# To add a new cell, type '# %%'
+]# To add a new cell, type '# %%'
 # To add a new markdown cell, type '# %% [markdown]'
 
 # %%
@@ -25,22 +25,7 @@ university=lines[3]
 
 print(username)
 
-# from urllib.parse import urlparse
-# from webdriver_manager.chrome import ChromeDriverManager
-
-# from webdriver_manager.chrome import ChromeDriverManager
-
-# browser = webdriver.Chrome(ChromeDriverManager().install())
-# import chromedriver_install as cdi
-# path = cdi.install(file_directory='c:\\data\\chromedriver\\', verbose=True, chmod=True, overwrite=False, version=None)
-# print('Installed chromedriver to path: %s' % path)
-# browser = webdriver.Chrome("c:\\data\\chromedriver\\chromedriver.exe")
 browser = webdriver.Chrome('E:\\pyhton\\driver\\chromedriver.exe')
-# browser = webdriver.Chrome(executable_path='E:\\python\\driver\\chromedriver.exe')
-
-# from webdriver_manager.chrome import ChromeDriverManager
-# browser = webdriver.Chrome(ChromeDriverManager().install())
-
 browser.get('https://www.linkedin.com/uas/login')
 
 elementID = browser.find_element_by_id('username')
@@ -49,11 +34,11 @@ time.sleep(random.randint(1, 3))
 elementID = browser.find_element_by_id('password')
 time.sleep(random.randint(1, 3))
 elementID.send_keys(password)
-
 elementID.submit()
 
 #%% 
 from selenium.webdriver.common.action_chains import ActionChains
+from datetime import datetime
 
 visitedProfiles = []
 profilesQueued = []
@@ -70,7 +55,7 @@ def clean_string(var):
 def visitProfile(link):
     browser.get(link)
     print('Enterd  visited profile')
-    Defaults1 = {'Name':'','Current_location':'','Link':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': ''}
+    Defaults1 = {'Name':'','Current_location':'','Link':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration':'','updated_on':''}
     ids1 = []
     thisdict = dict.fromkeys(ids1, Defaults1)
     total_height = int(browser.execute_script("return document.body.scrollHeight"))
@@ -85,6 +70,7 @@ def visitProfile(link):
     thisdict['link']= clean_string(link)
     thisdict['Current_location']=clean_string(html_soup.find("span",{"class":"text-body-small inline t-black--light break-words"}).text)
     # browser.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+    thisdict['updated_on']=datetime.now()
     time.sleep(random.randint(1,5))
 
     if (html_soup.find("li", {"class":"pv-profile-section__list-item pv-education-entity pv-profile-section__card-item ember-view"})):
@@ -137,6 +123,8 @@ def visitProfile(link):
                     print(x,y)
     return thisdict 
 #%%
+from pathlib import Path
+
 def Diff(li1, li2):
     li_dif = [i for i in li1 + li2 if i not in li1 or i not in li2]
     return li_dif
@@ -159,11 +147,14 @@ Recdict = dict.fromkeys(ids1, Defaults1)
 baselink = browser.current_url.partition('page')[0]
 print('@@@@@@@@@@@@@baselink@@@@@@@@@@@@@@@@@@',baselink)
 start_time=time.time()
-if (len(visitedProfiles)>0):
-    with open('visitedProfiles.txt', 'r') as filehandle:
-        visitedProfiles = [current_link.rstrip() for current_link in filehandle.readlines()]
-print('@@visitedProfiles',len(visitedProfiles))
-while(page <2):
+
+filename = Path('visitedProfiles.txt')
+
+filename.touch(exist_ok=True)
+with open('visitedProfiles.txt', 'r') as filehandle:
+    visitedProfiles = [current_link.rstrip() for current_link in filehandle.readlines()]
+print('length  at start @@visitedProfiles',len(visitedProfiles))
+while(page <7):
     if page==0:
         nextlink=baselink
         print('page 0 nextlink:'+nextlink)
@@ -184,24 +175,17 @@ while(page <2):
         if profile is not None:
             linkprofile=""
             visited_set = set()
-            # print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&77')
             for b in profile.find_all("span", {"class": "entity-result__title-text t-16"}):
-                # print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&66')
                 f=""
                 for f in b.find_all("a",{"class":"app-aware-link"}) :
-                    # print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&55')
-                    # print(f)
-                    # if re.match(f['href'] ,"https:\/\/www.linkedin.com\/in\/\*") :
                     linkprofile = f['href']
-                    # linkprofile="https://www.linkedin.com/in/shanawaz-alam-ju/"
                     if urlmatch.urlmatch(match_pattern,linkprofile):
                         print('linkprofile'+linkprofile,index)
-                    # profileIds=getNewProfileIDs(BeautifulSoup(browser.page_source), profilesQueued)
-                        # Recdict[index]=visitProfile(linkprofile)
                         if (len(visitedProfiles)<1):
                             visitedProfiles.append(linkprofile)
                         else:
                             if (linkprofile  not in visitedProfiles):
+                                # visitedProfiles.append(linkprofile)
                                 frontier.append(linkprofile)
                         # if len(Recdict[index])>0:
                         index=index+1
@@ -216,46 +200,35 @@ print('here')
 end_time=time.time()
 print ('total time spent scraping ',index,'profiles is',end_time-start_time)
 print ('@@length of frontier ',len(frontier))
+print ('@@length of visitedProfiles now ',len(visitedProfiles))
 
-visitedProfiles.append(frontier)
-if (len(visitedProfiles)>0):
-    with open('visitedProfiles.txt', 'w') as filehandle:
-        filehandle.writelines("%s\n" % link for link in visitedProfiles)
-# frontier=[]
-# frontier=Diff(visitedProfiles,places_old)
-# print(frontier)
-# print (len(Recdict))
-# # print(Recdict)
-# for x, y in Recdict.items():
-#     print(x, y) 
+# if (len(visitedProfiles)>0):
+#     with open('visitedProfiles.txt', 'a') as filehandle:
+#         filehandle.writelines("%s\n" % link for link in frontier)
+
 #%%
 frontier
 
 #%%
 index=0
-# list(visitedProfiles)
 start_time=time.time()
-# visitedProfiles1 = visitedProfiles[:6]
 if len(frontier)>0:
-# for i in visitedProfiles:
-#      Recdict[index]=visitProfile(i)
-#      time.sleep(random.randint(1,5))
-#      index=index+1
     for i in frontier:
         Recdict[index]=visitProfile(i)
         time.sleep(random.randint(1,5))
         index=index+1
 visitedProfiles=visitedProfiles+frontier
-with open('visitedProfiles.txt', 'w') as filehandle:
-    filehandle.writelines("%s\n" % link for link in visitedProfiles)             
+with open('visitedProfiles.txt', 'a') as filehandle:
+    filehandle.writelines("%s\n" % link for link in frontier)             
 if  Recdict is not None:
     for x, y in Recdict.items():
         print(x,y)
-end_time=time.time()        
-print ('total time spent scraping ',index,'profiles is',end_time-start_time)
+end_time=time.time() 
+print ('@@length of visitedProfiles now after adding frontier ',len(visitedProfiles))
+print ('total time spent scraping ',len(frontier),'profiles is',end_time-start_time)
 
 #%%    
-link='https://www.linkedin.com/in/shirsangshu-dutta-57a3ab13/'
+link='https://www.linkedin.com/in/koustav-mandal-14b244168/'
 Recdict=[]
 # browser.get(link)
 # download_urls(link)
@@ -272,7 +245,80 @@ print(values_list,type(values_list))
 df=pd.json_normalize(values_list)
 df.to_csv("emp_list_ju_cse_2606.csv")
 #%%
-df
+scraping_time=end_time-start_time       
+print ('total time spent scraping profile',index,'profiles is',scraping_time.seconds)
+total_time=(time_frontier+scraping_time).seconds
+print('total time spent for ',index,'profiles is',total_time,'seconds')
+#%%
+import pymysql
+import numpy as np
+connection = pymysql.connect(host='localhost',
+                             user='root',
+                             password='times82!',
+                             db='linkedin')
+
+cursor = connection.cursor()
+
+#%%
+df1 = df.replace(np.nan, '', regex=True)
+cols = "`,`".join([str(i) for i in df.columns.tolist()])
+df1
+for i,row in df1.iterrows():
+    sql = "INSERT INTO linkedin.pagesvisited (`" +cols + "`) VALUES (" + "%s,"*(len(row)-1) + "%s)"
+    print(sql)
+    cursor.execute(sql, tuple(row))
+    # the connection is not autocommitted by default, so we must commit to save our changes
+sql1 ="INSERT INTO linkedin.stats(date1,visitedprofile,count,time_taken) values(%s,%s,%s,%s)"
+data = (datetime.now(),len(visitedProfiles),len(frontier),total_time)
+cursor.execute(sql1,data)
+connection.commit() 
+print(cursor.rowcount, "record(s) onserted")                 
+# %%
+import numpy as np
+profile=visitProfile('https://www.linkedin.com/in/shirsangshu-dutta-57a3ab13/')
+lst=list(profile.values())
+print(lst)
+# df = pd.DataFrame(lst)
+# print(df)
+# df1 = df.replace(np.nan, '', regex=True)
+# cols = "`,`".join([str(i) for i in df.columns.tolist()])
+# df1
+
+# %% select data into df
+import pandas as pd
+links=[]
+ids1 = []
+dataframe = {}
+query="select Name,Current_location,Link,College,Degree,Branch,duration,designation,company ,dates_employed ,employ_duration ,updated_on from linkedin.pagesvisited WHERE link=%s"
+link='https://www.linkedin.com/in/sourav-barua-248b58103/'
+cursor = connection.cursor()
+dataframe = pd.read_sql(query,connection,params=[link])
+dataframe
+# browser.get(link)
+# download_urls(link)
+#%%
+import pandas as pd
+IDs = []
+Defaults1 = {'Name':'','Current_location':'','Link':'','College': '', 'Degree': '', 'Branch': '', 'duration': '','designation': '', 'company': '','dates_employed': '', 'employ_duration': '','updated_on':''}
+Recdict = []
+Recdict = dict.fromkeys(ids1, Defaults1)
+link='https://www.linkedin.com/in/sourav-barua-248b58103/'
+Recdict=visitProfile(link)
+df1 = pd.DataFrame(Recdict,index=[0])
+df1
+#%%
+dataframe.compare(df,keep_equal=True)
+
+#%%
+print(dataframe_t)
+# print(df)
+#%%
+
+filesFrame = pd.DataFrame(Recdict.items(), columns=['Name','college'])
+print(filesFrame)
+
+
+# %%
 #%%
 
 ###############Vizualizaions###
@@ -336,23 +382,6 @@ df1.value_counts(sort=False).plot( y = 'total_research',kind='pie',autopct='%1.1
 plt.show()
 
 
-#%%insert into Mongod   
-import pymongo
-import itertools
-import bson
-from bson import BSON
-myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-mydb = myclient["mydatabase"]
-mycol = mydb["alumni"]
-mycol.delete_many({})
-x = mycol.insert_many(values_list)
-print('ids of inserted documents\n---------------------')
-for id in x.inserted_ids:
-	print(id)
-for doc in mycol.find():
-    #Print each document
-    print(doc)
-
 #%%ending here
 
  #print only values having non null
@@ -362,36 +391,3 @@ for x, y in recdict1.items():
     print(x,y) 
 print (len(Recdict))
 # print(Recdict)
-#%%
-import pymysql
-connection = pymysql.connect(host='localhost',
-                             user='root',
-                             password='times82!',
-                             db='linkedin')
-#%%
-
-sql = "INSERT INTO linkedin.pagesvisited (name, College, degree, branch,duration, designation)VALUES (%s, %s, %s, %s, %s, %s)"
-
-
-# Execute the query
-cursor = connection.cursor()
-
-# cursor.execute(sql, ('Ahirangshu','msit','btech','CS','2007-2009','ASE'))
-
-# the connection is not autocommited by default. So we must commit to save our changes.
-connection.commit()                             
-# %%
-import numpy as np
-df1 = df.replace(np.nan, '', regex=True)
-cols = "`,`".join([str(i) for i in df.columns.tolist()])
-df1
-#%%
-# Insert DataFrame recrds one by one.
-cursor = connection.cursor()
-for i,row in df1.iterrows():
-    sql = "INSERT INTO linkedin.pagesvisited (`" +cols + "`) VALUES (" + "%s,"*(len(row)-1) + "%s)"
-    print(sql)
-    cursor.execute(sql, tuple(row))
-    # the connection is not autocommitted by default, so we must commit to save our changes
-    connection.commit()
-# %%
