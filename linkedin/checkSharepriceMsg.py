@@ -1,4 +1,3 @@
-##%%
 from nsetools import Nse
 from pprint import pprint
 import pandas as pd
@@ -7,10 +6,7 @@ from nsepy import get_history
 from twilio.rest import Client
 msg=''
 nse = Nse()
-df=''
 df = pd.read_csv('C:\\Users\\pc\\Desktop\\stocks.csv')
-df
-##%%
 i=0
 
 for index, row in df.iterrows():
